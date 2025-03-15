@@ -6,7 +6,7 @@
   <link href="https://ethanbao27.github.io/atom.xml" rel="self"/>
   
   <link href="https://ethanbao27.github.io/"/>
-  <updated>2025-01-04T08:46:24.693Z</updated>
+  <updated>2024-12-14T17:39:54.484Z</updated>
   <id>https://ethanbao27.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>2025年，我选择了前端</title>
-    <link href="https://ethanbao27.github.io/2025/01/04/2025%E5%B9%B4%EF%BC%8C%E6%88%91%E9%80%89%E6%8B%A9%E4%BA%86%E5%89%8D%E7%AB%AF/"/>
-    <id>https://ethanbao27.github.io/2025/01/04/2025%E5%B9%B4%EF%BC%8C%E6%88%91%E9%80%89%E6%8B%A9%E4%BA%86%E5%89%8D%E7%AB%AF/</id>
-    <published>2025-01-04T08:38:16.000Z</published>
-    <updated>2025-01-04T08:46:24.693Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="往前端冲吧">往前端冲吧！</h1><table><thead><tr><th><strong>字段</strong></th><th><strong>内容</strong></th></tr></thead><tbody><tr><td>Created</td><td>2025年1月4日 14:05</td></tr><tr><td>Tags</td><td>Daily, Personal, Planning</td></tr><tr><td>日期</td><td>2025年1月4日</td></tr><tr><td>状态</td><td>完成</td></tr></tbody></table><blockquote><p><ahref="https://ethanbao.notion.site/2025-1-4-17188047cd2a80ada74fcae91d99688d">原始文章在我的<strong>notion笔记</strong></a>,也可以小红书/公众号/抖音搜索我的个人👤账号：<u>CodingEpoch</u></p></blockquote><h1 id="我决定全面往前端方向努力">我决定全面往前端方向努力。</h1><hr /><p>看了<a href="https://antfu.me/">AnthonyFu</a>的视频，开始觉得前端的天花板也可以很高。不仅仅是可以学设计（Figma）之类的工具，这对色彩要求是挺高的。而我正好也对摄影感兴趣，所以是一个不错的契机。</p><blockquote><p>前端相比后端，在工业界显然是更具有创造力和活力的，光看<strong>社区的活跃度就知道了。</strong></p></blockquote><h2 id="为什么不是后端">为什么不是后端</h2><ul><li>后端，显然更接近传统计算机，包括还要接触到软件的底层以及硬件。因此和学校里的专业课相关性更大。我觉得在<strong>中国，大多数学生都会选择学校给出的方向。因此计算机科班显然更倾向于选择传统Java后端开发岗，SpringBoot那一套。</strong></li><li>由上可见，介于制度以及环境种种原因，后端就业环境绝对比前端更卷，计算机科班生，就需要背诵更多的<ahref="https://github.com/CoderLeixiaoshuai/java-eight-part">**八股文</a>，**显然我并不认为计算机是这样的一门学科，需要靠背题来获得工作机会。这种就业市场烂尾的导向说明后端岗位的内卷以及过饱和。</li></ul><h3 id="大前端的趋势">大前端的趋势</h3><ul><li>前端必然有其优势，能够发展到今天，传统的FrontEnd-已经显然不是切图那么简单，性能优化，UX设计，3D渲染，都是大前端包括的部分，这些方向都是我感兴趣的方向。我天生就不喜欢学校刻板教学的<strong>古早计算机知识。</strong></li><li>时代在变化，大多数前端工程师据我观察都发展为了<strong>自媒体+程序员的双重职业，而互联网上的后端工程师没有前端这么常见。</strong>现在这个时代是大数据+传媒时代，会传媒的人能够成为influencer，也更懂互联网潮流，自然也更有可能成功。</li></ul><h1 id="技术栈的爆炸">技术栈的爆炸</h1><hr /><ul><li>近年来前端技术栈的<strong>井喷</strong>，在我看来是行业生命力的象征。这里就不列举有哪些技术栈了，要熟练/彻底掌握它们需要一定的技术壁垒，这是不比后端更少的技术壁垒。因为后端的大部分壁垒是计算机科班。高级前端也需要科班的知识。</li></ul><p>总而言之，我从去年7月份学习的前端，至今也有半年了，前端需要打通<strong>计算机网络+设计基础，最好还有图形学+算法+计算机底层。</strong></p><p>而且大前端趋势也是在将Node.Js融入后端，基本上可以称为FulStack了。后端即将被替代，Java语言太过笨重。</p><figure><img src="/images/image.png" alt="速度-规模-品质 铁三角" /><figcaption aria-hidden="true">速度-规模-品质 铁三角</figcaption></figure><p>速度-规模-品质 铁三角</p><p>还是根据Anthony Fu的博客：</p><p><ahref="https://antfu.me/posts/mental-health-oss-zh">开源的心理建设</a></p><blockquote><p><strong>软件工程告诉我们，开发速度、品质、规模只能三选二。</strong></p></blockquote><p>这个时代是快节奏的，强调快速交付。</p><p>前端开发模式是快速的，相比笨重的后端IDE，轻量级的vscode集成可以快速迭代，达到敏捷开发和立刻交付。结合<strong>AI调优</strong>，更锻炼程序员的市场眼界和洞察需求能力。</p><h1 id="all-in-前端">ALL-IN 前端？</h1><hr /><h3 id="选择前端并不代表抛弃后端">选择前端，并不代表抛弃后端。</h3><p>我选择的前端，并不代表我抛弃学习BackEnd的算法和模式。相反，<strong>Node.Js的出现会让前端程序员转而投奔后端。</strong></p><blockquote><p>我选择的是<strong>快速开发原型的能力，以及敏锐的用户市场观察，以及优秀的活跃社区</strong>。历史的发展让我在2025年这个时间点选择了前端。</p></blockquote><p>Bytheway，我目前还处在大三这个节点。还有很多东西要学习，包括<strong>计算机基础知识。巩固后端的基础能力也是很重要的。所以我还是会学很多后端的内容。</strong></p><p>只是前端是学校不教的知识，因此我会更侧重于课业之余主要提升这部分的能力。</p><p>如果你赞同我的看法，欢迎小红书/抖音/微信公众号关注我的👤个人知识分享栏目：CodingEpoch</p><p>目前这个号还在起步阶段，我会陆续分享我的计算机学习心得，以及我认为有必要分享的知识点，帮助广大群众快速掌握知识。</p><p>或者可以关注我的个人博客：<ahref="https://ethanbao27.github.io/">Ethan Bao</a>（<ahref="https://ethanbao27.github.io/">https://ethanbao27.github.io/</a>）</p>]]></content>
-    
-    
-    <summary type="html">关于为什么我在2025年初决定all in前端的思路。</summary>
-    
-    
-    
-    <category term="思考" scheme="https://ethanbao27.github.io/categories/%E6%80%9D%E8%80%83/"/>
-    
-    
-    <category term="思考" scheme="https://ethanbao27.github.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
   
   <entry>
     <title>TaiwindCSS基本使用</title>
