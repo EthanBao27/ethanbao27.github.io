@@ -16,9 +16,11 @@ https://ethanbao27.github.io/tags/%E5%89%8D%E7%AB%AF/
 https://ethanbao27.github.io/tags/javascript%E6%A1%86%E6%9E%B6/
 https://ethanbao27.github.io/tags/WebGL/
 https://ethanbao27.github.io/tags/%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E/
+https://ethanbao27.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/
+https://ethanbao27.github.io/tags/%E6%AD%BB%E9%94%81/
+https://ethanbao27.github.io/tags/%E5%A4%8D%E4%B9%A0/
 https://ethanbao27.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/
 https://ethanbao27.github.io/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/
-https://ethanbao27.github.io/tags/%E5%A4%8D%E4%B9%A0/
 https://ethanbao27.github.io/tags/JPEG/
 https://ethanbao27.github.io/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/
 https://ethanbao27.github.io/tags/%E7%AE%97%E6%B3%95/
@@ -30,10 +32,8 @@ https://ethanbao27.github.io/tags/ajax/
 https://ethanbao27.github.io/tags/%E5%BC%82%E6%AD%A5/
 https://ethanbao27.github.io/tags/javascript/
 https://ethanbao27.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/
-https://ethanbao27.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/
-https://ethanbao27.github.io/tags/%E6%AD%BB%E9%94%81/
 https://ethanbao27.github.io/categories/%E5%89%8D%E7%AB%AF/
+https://ethanbao27.github.io/categories/OS/
 https://ethanbao27.github.io/categories/Network/
 https://ethanbao27.github.io/categories/DIP/
 https://ethanbao27.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/
-https://ethanbao27.github.io/categories/OS/
