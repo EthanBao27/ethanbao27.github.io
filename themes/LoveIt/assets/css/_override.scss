@@ -2,3 +2,20 @@
 // Override Variables
 // 覆盖变量
 // ==============================
+// assets/css/_override.scss
+
+@import "_variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+$global-font-family: "Microsoft Jhenghei", "Lantinghei SC", "lanting",
+  "PingFang SC", "Segoe UI", "Microsoft YaHei", "Inter", Arial, sans-serif !default;
+
+// 行高从原来的 1.75rem 调整到 2rem
+$global-line-height: 2rem !default;
+
+// 段落再加一点垂直间距
+.article-content p {
+  text-indent: 2em;
+  margin-bottom: 1.25em; // 比之前 1em 略大
+}
