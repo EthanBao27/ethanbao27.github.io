@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>OS：处理机调度与死锁🔒 - 鲍宇翔的博客</title><meta name="Description" content="鲍宇翔的博客，记录生活中的点滴，分享一些有趣的事物。"><meta property="og:url" content="http://example.org/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/">
+        <title>OS：处理机调度与死锁🔒 - 鲍宇翔的博客</title><meta name="Description" content="鲍宇翔的博客，记录生活中的点滴，分享一些有趣的事物。"><meta property="og:url" content="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/">
   <meta property="og:site_name" content="鲍宇翔的博客">
   <meta property="og:title" content="OS：处理机调度与死锁🔒">
   <meta property="og:description" content="处理机调度与死锁 🔒 Q:如果系统只有一个 cpu,有两个进程要运行.进程 A 的运行时间将是 1 小时,进程 B 的运行时间是 1 分钟.那么认为操作系统让哪个进程先运行比较合理?">
@@ -16,16 +16,16 @@
     <meta property="article:tag" content="操作系统">
     <meta property="article:tag" content="死锁">
     <meta property="article:tag" content="复习">
-    <meta property="og:image" content="http://example.org/images/avatar.png">
+    <meta property="og:image" content="https://baoyuxiang.fun/images/avatar.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://example.org/images/avatar.png">
+  <meta name="twitter:image" content="https://baoyuxiang.fun/images/avatar.png">
   <meta name="twitter:title" content="OS：处理机调度与死锁🔒">
   <meta name="twitter:description" content="处理机调度与死锁 🔒 Q:如果系统只有一个 cpu,有两个进程要运行.进程 A 的运行时间将是 1 小时,进程 B 的运行时间是 1 分钟.那么认为操作系统让哪个进程先运行比较合理?">
 <meta name="application-name" content="鲍宇翔的博客">
 <meta name="apple-mobile-web-app-title" content="鲍宇翔的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" /><link rel="prev" href="http://example.org/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" /><link rel="next" href="http://example.org/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" /><link rel="prev" href="https://baoyuxiang.fun/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" /><link rel="next" href="https://baoyuxiang.fun/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -35,9 +35,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.org\/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81\/"
+            "@id": "https:\/\/baoyuxiang.fun\/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81\/"
         },"genre": "posts","keywords": "操作系统, 死锁, 复习","wordcount":  3056 ,
-        "url": "http:\/\/example.org\/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81\/","datePublished": "2024-10-26T13:43:00+08:00","dateModified": "2024-10-26T13:43:00+08:00","publisher": {
+        "url": "https:\/\/baoyuxiang.fun\/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81\/","datePublished": "2024-10-26T13:43:00+08:00","dateModified": "2024-10-26T13:43:00+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -390,7 +390,7 @@ $$</p>
                             <a class="link-to-markdown" href="/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-hashtag="操作系统"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-hashtag="操作系统"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>

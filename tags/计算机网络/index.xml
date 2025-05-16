@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>计算机网络 on 鲍宇翔的博客</title>
-    <link>http://example.org/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <link>https://baoyuxiang.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
     <description>Recent content in 计算机网络 on 鲍宇翔的博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
     <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
     <lastBuildDate>Sun, 03 Nov 2024 21:13:40 +0800</lastBuildDate>
-    <atom:link href="http://example.org/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://baoyuxiang.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>计算机网络考试复习（详细版）</title>
-      <link>http://example.org/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</link>
+      <link>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sun, 03 Nov 2024 21:13:40 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://example.org/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</guid>
+      <guid>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</guid>
       <description>&lt;h1 id=&#34;计算机网络总复习&#34;&gt;计算机网络总复习&lt;/h1&gt;&#xA;&lt;h2 id=&#34;第一章-概述&#34;&gt;第一章 概述&lt;/h2&gt;&#xA;&lt;p&gt;计算机网络：结点 node（计算器、交换机、路由器）+链路 link&lt;/p&gt;&#xA;&lt;p&gt;功能：数据通信、资源共享&lt;/p&gt;&#xA;&lt;p&gt;Internet TCP/IP ISP 局域网与广域网&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;电路交换&lt;/strong&gt;：突发式传输、适用低频&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;传输时间少、有序到达、但要建立连接、不灵活、利用率低、无差错控制&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>🛜五层体系结构协议复习</title>
-      <link>http://example.org/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</link>
+      <link>https://baoyuxiang.fun/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Sun, 27 Oct 2024 20:00:00 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://example.org/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</guid>
+      <guid>https://baoyuxiang.fun/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</guid>
       <description>&lt;h1 id=&#34;-五层体系结构协议复习&#34;&gt;🛜 五层体系结构协议复习&lt;/h1&gt;&#xA;&lt;p&gt;首先我们需要了解为什么计算机网络要学习&lt;strong&gt;五层结构模型（TCP/IP 模型）&lt;/strong&gt;，因为这更简化，便于我们了解实际网络协议，并且更贴近现实的网络组成。&lt;/p&gt;</description>
     </item>
   </channel>
