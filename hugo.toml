@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://baoyuxiang.fun/"
 
 
 
@@ -125,7 +125,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     title = ""
 
 
-
 [params]
 
   # 网站默认主题样式 ["auto", "light", "dark"]
@@ -148,15 +147,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
   # 网站标题, 用于 Open Graph 和 Twitter Cards
 
-  title = "我的网站"
+  title = "BaoYuXiang's Blog"
 
   # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
 
-  description = "这是我的全新 Hugo 网站"
+  description = "鲍宇翔的博客，记录生活中的点滴，分享一些有趣的事物。"
 
   # 网站图片, 用于 Open Graph 和 Twitter Cards
 
-  images = ["/logo.png"]
+  images = ["images/avatar.png"]
 
 
 
@@ -190,15 +189,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
       # LOGO 的 URL
 
-      logo = "images/avatar.jpg"
+      logo = ""
 
       # 标题名称
 
-      name = ""
+      name = "Bao's Blog"
 
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
 
-      pre = ""
+      pre = '<i class="fas fa-rocket"></i> '
 
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
 
@@ -234,11 +233,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     # 网站创立年份
 
-    since = 2019
+    since = 2025
 
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
 
-    icp = ""
+    icp = "沪ICP备2025116601号-1"
 
     # 许可协议信息 (支持 HTML 格式)
 
@@ -288,7 +287,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
 
-    title = "我的网站"
+    title = "鲍宇翔的博客"
 
     # 是否隐藏网站图标资源链接
 
@@ -384,7 +383,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
       # 主页显示的网站副标题 (允许 HTML 格式)
 
-      subtitle = "这是我的全新 Hugo 网站"
+      subtitle = "在时光流影里，留存一缕思想的温度"
 
       # 是否为副标题显示打字机动画
 
@@ -420,19 +419,19 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
   [params.social]
 
-    GitHub = "xxxx"
+    GitHub = "https://github.com/EthanBao27"
 
     Linkedin = ""
 
-    X = "xxxx" # 
+    #X = "xxxx" # 
 
-    Twitter = "" # 
+    #Twitter = "" # 
 
-    Instagram = "xxxx"
+    Instagram = "https://www.instagram.com/libra_28166/"
 
-    Facebook = "xxxx"
+    #Facebook = "xxxx"
 
-    Telegram = "xxxx"
+    #Telegram = "xxxx"
 
     Medium = ""
 
@@ -508,7 +507,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     Whatsapp = ""
 
-    Zhihu = ""
+    Zhihu = "https://www.zhihu.com/people/bao-yu-xiang-83"
 
     Douban = ""
 
@@ -544,7 +543,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     Matrix = ""
 
-    Bilibili = ""
+    Bilibili = "https://space.bilibili.com/31855043?spm_id_from=333.1007.0.0"
 
     Discord = ""
 
@@ -578,9 +577,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     Threads = "" # 
 
-    Phone = ""
+    #Phone = "18702106887"
 
-    Email = "xxxx@xxxx.com"
+    Email = "522425561@qq.com"
 
     RSS = true # 
 
@@ -600,11 +599,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     #  是否使用 twemoji
 
-    twemoji = false
+    twemoji = true
 
     # 是否使用 lightgallery
 
-    lightgallery = false
+    lightgallery = true
 
     #  是否使用 ruby 扩展语法
 
@@ -776,7 +775,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     [params.page.comment]
 
-      enable = false
+      enable = true
 
       # Disqus 评论系统设置
 
@@ -798,13 +797,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
         enable = false
 
-        owner = ""
+        owner = "EthanBao27"
 
-        repo = ""
+        repo = "github.io-comments"
 
-        clientId = ""
+        clientId = "Ov23ctvhMMeVRu4ClQiu"
 
-        clientSecret = ""
+        clientSecret = "648c5acdab9f44e4bbf3e312c3aafbf798900508"
 
       # Valine 评论系统设置
 
@@ -896,11 +895,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
       [params.page.comment.utterances]
 
-        enable = false
+        enable = true
 
         # owner/repo
 
-        repo = ""
+        repo = "EthanBao27/ethanbao27.github.io-comments"
 
         issueTerm = "pathname"
 
