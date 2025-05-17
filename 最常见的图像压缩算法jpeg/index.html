@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>最常见的图像压缩算法：JPEG - 鲍宇翔的博客</title><meta name="Description" content="鲍宇翔的博客，记录生活中的点滴，分享一些有趣的事物。"><meta property="og:url" content="http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/">
+  <meta property="og:site_name" content="鲍宇翔的博客">
+  <meta property="og:title" content="最常见的图像压缩算法：JPEG">
+  <meta property="og:description" content="DIP-JPEG 图像压缩 为什么 JPEFG 有用 人类眼镜的细胞对图像的感知程度，亮度比色度感知强烈的多。
+因此减少人类眼镜感知较弱的区域，即减少颜色的差异，就可以实现压缩。
+压缩步骤 首先需要进行色彩空间转换，每一个像素都有 RGB 的红绿蓝叠加，算法需要通过一个固定的公式算出Y（亮度）、Cb（蓝色色度）、Cr（红色色度）。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-22T16:22:03+08:00">
+    <meta property="article:modified_time" content="2024-10-22T16:22:03+08:00">
+    <meta property="article:tag" content="JPEG">
+    <meta property="article:tag" content="数字图像处理">
+    <meta property="article:tag" content="算法">
+    <meta property="article:tag" content="图像压缩">
+    <meta property="article:tag" content="哈夫曼编码">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/avatar.png">
+  <meta name="twitter:title" content="最常见的图像压缩算法：JPEG">
+  <meta name="twitter:description" content="DIP-JPEG 图像压缩 为什么 JPEFG 有用 人类眼镜的细胞对图像的感知程度，亮度比色度感知强烈的多。
+因此减少人类眼镜感知较弱的区域，即减少颜色的差异，就可以实现压缩。
+压缩步骤 首先需要进行色彩空间转换，每一个像素都有 RGB 的红绿蓝叠加，算法需要通过一个固定的公式算出Y（亮度）、Cb（蓝色色度）、Cr（红色色度）。">
+<meta name="application-name" content="鲍宇翔的博客">
+<meta name="apple-mobile-web-app-title" content="鲍宇翔的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" /><link rel="prev" href="http://localhost:1313/three-js%E7%AE%80%E4%BB%8B/" /><link rel="next" href="http://localhost:1313/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "最常见的图像压缩算法：JPEG",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg\/"
+        },"genre": "posts","keywords": "JPEG, 数字图像处理, 算法, 图像压缩, 哈夫曼编码","wordcount":  2443 ,
+        "url": "http:\/\/localhost:1313\/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg\/","datePublished": "2024-10-22T16:22:03+08:00","dateModified": "2024-10-22T16:22:03+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Ethan Bao"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="鲍宇翔的博客"><span class="header-title-pre"><i class="fas fa-rocket"></i> </span>Bao&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fa-solid fa-file-lines fa-fw'></i> 文章 </a><a class="menu-item" href="/tags/"><i class='fa-solid fa-tags fa-fw'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa-solid fa-grip fa-fw'></i> 分类 </a><a class="menu-item" href="/about/" title="关于我"><i class='fa-solid fa-user'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="鲍宇翔的博客"><span class="header-title-pre"><i class="fas fa-rocket"></i> </span>Bao&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title=""><i class='fa-solid fa-file-lines fa-fw'></i>文章</a><a class="menu-item" href="/tags/" title=""><i class='fa-solid fa-tags fa-fw'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa-solid fa-grip fa-fw'></i>分类</a><a class="menu-item" href="/about/" title="关于我"><i class='fa-solid fa-user'></i>关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">最常见的图像压缩算法：JPEG</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="wx:epoch_fish" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ethan Bao</a></span>&nbsp;<span class="post-category">included in <a href="/categories/dip/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>DIP</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-10-22">2024-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2443 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#为什么-jpefg-有用">为什么 JPEFG 有用</a></li>
+    <li><a href="#压缩步骤">压缩步骤</a></li>
+    <li><a href="#小结">小结</a></li>
+    <li><a href="#编码">编码</a>
+      <ul>
+        <li><a href="#游程编码">游程编码</a></li>
+        <li><a href="#哈夫曼编码-huffman-encoding">哈夫曼编码 Huffman Encoding</a>
+          <ul>
+            <li><a href="#h264">H.264</a></li>
+            <li><a href="#重构图片过程">重构图片过程</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#jpeg-的缺点">JPEG 的缺点</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="dip-jpeg-图像压缩">DIP-JPEG 图像压缩</h1>
+<h2 id="为什么-jpefg-有用">为什么 JPEFG 有用</h2>
+<p>人类眼镜的细胞对图像的感知程度，亮度比色度感知强烈的多。</p>
+<p>因此减少人类眼镜感知较弱的区域，即减少颜色的差异，就可以实现压缩。</p>
+<h2 id="压缩步骤">压缩步骤</h2>
+<ol>
+<li>
+<p>首先需要进行色彩空间转换，每一个像素都有 RGB 的红绿蓝叠加，算法需要通过一个固定的公式算出<strong>Y（亮度）、Cb（蓝色色度）、Cr（红色色度）</strong>。</p>
+</li>
+<li>
+<p>进行色度缩减取样，很多数据会被删除。将蓝色和红色色度分量层的像素按照 2x2 像素成一个区块这样划分。然后计算每个区块的平均值，然后缩小图像（4:2:0），使得含有 1 个平均值的由 4 个像素组成的区块只占一个像素的空间。于是那些我们 👀 眼睛不易感知的红蓝色度信息量 shrink to 1/4 size，而亮度（luminance）保持不变。<em>（网上流行的包浆图就是这么来的）</em></p>
+<blockquote>
+<p>考虑一下刚才的两步，计算之前 SIZE=1+1+1=3.0，计算之后为 SIZE=1+1/4+1/4=1.5，图像已经变为原来大小的一半了。</p></blockquote>
+</li>
+<li>
+<p>当我们查看图像时，会放大图像到原始尺寸，根据 YCbCr 重新计算 RGB*（可能发生变化）*</p>
+</li>
+<li>
+<p>接下来的两个步骤是<strong>重点</strong>，进行<strong>离散余弦变换（Discrete Cosine Transform,DCT ）<strong>和</strong>量化（Quantiaztion）</strong>。这利用了人眼不擅长感知高频率的图像信息的原理，即对于细节并不能精确感知。如阴影变化，和摄影中失焦的场景。以上两个步骤会遍历图像各个部分，并找到由高频率色度或亮度的像素频繁出现的区域，然后将这些人眼很难感知的像素删除。对于三个图层中的每一个图层进行以下步骤*（以亮度涂层举例）*： - 将整个图像<strong>按照 8x8 像素划分成许多区域</strong>，称为“区块”。每个区块因此有 64 像素，每个像素用 0 ～ 255 的数值表示。如果是亮度图层就是代表亮度值。 - 减去 128 来改变各个亮度数值，这样取值范围就变成了-128 ～-127。（亮度图-128 为黑色，127 为白色） - 每一个区块内，我们可以先找到 64 个 8x8 基本图像（正弦函数的频率域图）并且每个图像都会有一个计算得出的 DCT 系数，原始图像可以通过计算出的每个基本图像 ✖️ 它对应的系数后再叠加 64 次得出。<em>（具体的数学公式笔者也不了解，请自行网上查阅）</em></p>
+<blockquote>
+<p>DCT 不能压缩或缩小图像，但下一个步骤，量化可以</p></blockquote>
+</li>
+<li>
+<p>DCT 后我们会有一个常数表，我们要把其中的各个值除上对应量化表中的各个值，并四舍五入取整。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/jpeg-0.png"
+        data-srcset="/images/jpeg-0.png, /images/jpeg-0.png 1.5x, /images/jpeg-0.png 2x"
+        data-sizes="auto"
+        alt="/images/jpeg-0.png"
+        title="量化过程" /></p>
+</li>
+</ol>
+<p>​ 量化表右下角数值偏高，是人眼不擅长感知德高频数据。而数值 较小的左上角是人眼更容易区分的样式所在。</p>
+<p>​ 在刚才的步骤中，我们舍弃了人眼无法感知的数据，针对色度， 我们会采用一个数值更大的量化表，舍去更多的颜色数据。</p>
+<h2 id="小结">小结</h2>
+<ul>
+<li>从本质上讲，整个余弦变换+量化的过程，<strong>一整张图像都使用了一组相同的 64 个基础图像和两个量化表：一个用于亮度，另一个用于色度。以便将 8x8 的像素区块转换为几个数字和一大堆的 0。</strong></li>
+</ul>
+<h2 id="编码">编码</h2>
+<h3 id="游程编码">游程编码</h3>
+<ul>
+<li>
+<p>在这一步骤中，我们列出所有区块中的亮度与色度数值（更改后）。然而是这样的顺序：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/jpeg-1.png"
+        data-srcset="/images/jpeg-1.png, /images/jpeg-1.png 1.5x, /images/jpeg-1.png 2x"
+        data-sizes="auto"
+        alt="/images/jpeg-1.png"
+        title="游程编码" /></p>
+</li>
+<li>
+<p>因为这样子更可能找到一连串的非 0 数字。</p>
+</li>
+<li>
+<p>接下来，在我们列出的数字中，使用游程编码 Run length encoding algorithm，列出我们有几个 0。这样只有几十个数字的列表显然比 0 ～ 255 的方法压缩的多。</p>
+</li>
+</ul>
+<img src="/images/jpeg-2.png" style="zoom:50%;" />
+<h3 id="哈夫曼编码-huffman-encoding">哈夫曼编码 Huffman Encoding</h3>
+<p>​ 这种独立编码也运用在 H.264 视频压缩算法中（也被称为高级视频编码，AVC），是目前 Youtube 上传视频推荐的视频压缩算法。它使用了色度所见取样或色度抽样技术，以及离散余弦变换和量化技术的一些变种。</p>
+<p>​ 这里对哈夫曼编码进行简述，感兴趣的可以查阅资料自行了解。</p>
+<ol>
+<li>
+<p>需要对待编码的数据中每个符号出现的频率进行统计。这些频率将用于构建哈夫曼树。</p>
+</li>
+<li>
+<p>哈夫曼树是一种二叉树，其中每个叶子节点代表一个符号，且路径长度与符号的频率相关。构建哈夫曼树的步骤如下：</p>
+<p>​ 1. <strong>初始化</strong>：将所有符号视为独立的节点，并按照频率从小到大排序。</p>
+<p>​ 2. <strong>合并最小频率的两个节点</strong>：将频率最小的两个节点合并为一个新的父节点，其频率为两个子节点频率之和。</p>
+<p>​ 3. <strong>重复合并</strong>：将新节点加入节点列表中，重新排序，重复步骤 2，直到所有节点合并成一棵树。</p>
+</li>
+<li>
+<p>根据哈夫曼树<strong>生成哈夫曼表</strong>，从根节点到每个叶子节点的路径决定了该符号的哈夫曼编码。通常，向左分支记为 0，向右分支记为 1。</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph TD
+</span></span><span class="line"><span class="cl">Root[100]
+</span></span><span class="line"><span class="cl">Root --&gt; A[45]
+</span></span><span class="line"><span class="cl">Root --&gt; CBFED[55]
+</span></span><span class="line"><span class="cl">CBFED --&gt; CB[25]
+</span></span><span class="line"><span class="cl">CBFED --&gt; FED[30]
+</span></span><span class="line"><span class="cl">CB --&gt; C[12]
+</span></span><span class="line"><span class="cl">CB --&gt; B[13]
+</span></span><span class="line"><span class="cl">FED --&gt; FE[14]
+</span></span><span class="line"><span class="cl">FED --&gt; D[16]
+</span></span><span class="line"><span class="cl">FE --&gt; F[5]
+</span></span><span class="line"><span class="cl">FE --&gt; E[9]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">classDiagram
+</span></span><span class="line"><span class="cl">class HuffmanTable {
+</span></span><span class="line"><span class="cl">    +Symbol : A
+</span></span><span class="line"><span class="cl">    +Code : 0
+</span></span><span class="line"><span class="cl">    +Symbol : B
+</span></span><span class="line"><span class="cl">    +Code : 101
+</span></span><span class="line"><span class="cl">    +Symbol : C
+</span></span><span class="line"><span class="cl">    +Code : 100
+</span></span><span class="line"><span class="cl">    +Symbol : D
+</span></span><span class="line"><span class="cl">    +Code : 111
+</span></span><span class="line"><span class="cl">    +Symbol : E
+</span></span><span class="line"><span class="cl">    +Code : 1101
+</span></span><span class="line"><span class="cl">    +Symbol : F
+</span></span><span class="line"><span class="cl">    +Code : 1100
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="h264">H.264</h4>
+<p>​ 然而，H.264 显然更加复杂，因为它不是像 JPEG 那样压缩单一的静态图像。每 30 帧使用 iFrame（JPEG），而其他 29 帧使用预测或双向预测,只对差异和运动进行编码，同时使用先前解码的帧作为参考。</p>
+<h4 id="重构图片过程">重构图片过程</h4>
+<ul>
+<li>
+<p>让我们回到 JPEG，首先我们执行哈夫曼解码,根据哈夫曼表将编码变回 DCT 系数，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">Compressed Data: 110100010...
+</span></span><span class="line"><span class="cl">Decoded DCT Coefficients: [16, 11, -10, ...]
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>并且分解游程编码（disassemble），然后把一连串的数字按照<strong>去交错</strong>（De-Zigzag）的方式重新排列为 8x8 矩阵。</p>
+</li>
+<li>
+<p>接下来，我们执行<strong>反量化</strong>，通俗来讲就是讲各个值乘以量化表（之前讲过的那两张表，之前是除法），然后将所得常数乘以相应的基础图像（基础图像也是一开始就有的，之前也是除法），并将所有结果图像叠加在一起。</p>
+</li>
+<li>
+<p>将蓝色跟红色色度图像放大，并将亮度和色度值重新转换为 RGB 色彩空间。</p>
+</li>
+</ul>
+<blockquote>
+<p>智能手机相机的拍摄照片至少有十几万像素，JPEG 在几秒钟内就要完成压缩和解压缩，真是不可思议！</p></blockquote>
+<h2 id="jpeg-的缺点">JPEG 的缺点</h2>
+<p>有时候，你可以选择压缩的程度，而这会改变量化表的数值，这种四舍五入做除法的算法，如果压缩量变大，那么就会有更多的 0，图像也会因此变得更小。</p>
+<p>然而，如果压缩量过大，图像会出现 artifacts，或者说块效应。它们看起开就像方块边缘的模糊斑点（类似于基础图像，就是离散余弦变换表中的特征，图像有很明显的横线或竖线）。</p>
+<p>其次，压缩会去除高频数据，使得图像的精确度降低。</p>
+<p>然而，这也是一种优点，因为没有一个相机能够做到完美对焦，所以很难分辨出未压缩和压缩的图像之间的区别。</p>
+<p>但是，压缩矢量图的表现不佳，直线的压缩会出现锯齿。因为 JPEG 依靠基础图像来重建直线。</p>
+<h2 id="总结">总结</h2>
+<p>JPEG 仍是使用量最多的图片压缩算法，因为它古老、为人熟知、无版权。</p>
+<p>但还有很多其他图像格式，也具有很好的压缩能力。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-10-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" data-hashtag="JPEG"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" data-title="最常见的图像压缩算法：JPEG"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" data-title="最常见的图像压缩算法：JPEG"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" data-title="最常见的图像压缩算法：JPEG"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/jpeg/">JPEG</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a>,&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9/">图像压缩</a>,&nbsp;<a href="/tags/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼编码</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/three-js%E7%AE%80%E4%BB%8B/" class="prev" rel="prev" title="Three.js简介"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Three.js简介</a>
+            <a href="/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" class="next" rel="next" title="OS：处理机调度与死锁🔒">OS：处理机调度与死锁🔒<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="#ZgotmplZ" target="_blank">Ethan Bao</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">沪ICP备2025116601号-1</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
