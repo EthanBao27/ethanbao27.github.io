@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 鲍宇翔的博客</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://baoyuxiang.fun/categories/</link>
     <description>Recent content in Categories on 鲍宇翔的博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
     <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
     <lastBuildDate>Thu, 15 May 2025 18:15:56 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://baoyuxiang.fun/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自我</title>
-      <link>http://localhost:1313/categories/%E8%87%AA%E6%88%91/</link>
+      <link>https://baoyuxiang.fun/categories/%E8%87%AA%E6%88%91/</link>
       <pubDate>Thu, 15 May 2025 18:15:56 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/categories/%E8%87%AA%E6%88%91/</guid>
+      <guid>https://baoyuxiang.fun/categories/%E8%87%AA%E6%88%91/</guid>
       <description></description>
     </item>
     <item>
       <title>前端</title>
-      <link>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</link>
+      <link>https://baoyuxiang.fun/categories/%E5%89%8D%E7%AB%AF/</link>
       <pubDate>Sat, 14 Dec 2024 23:55:24 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</guid>
+      <guid>https://baoyuxiang.fun/categories/%E5%89%8D%E7%AB%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>Network</title>
-      <link>http://localhost:1313/categories/network/</link>
+      <link>https://baoyuxiang.fun/categories/network/</link>
       <pubDate>Sun, 03 Nov 2024 21:13:40 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/categories/network/</guid>
+      <guid>https://baoyuxiang.fun/categories/network/</guid>
       <description></description>
     </item>
     <item>
       <title>OS</title>
-      <link>http://localhost:1313/categories/os/</link>
+      <link>https://baoyuxiang.fun/categories/os/</link>
       <pubDate>Sat, 26 Oct 2024 13:43:00 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/categories/os/</guid>
+      <guid>https://baoyuxiang.fun/categories/os/</guid>
       <description></description>
     </item>
     <item>
       <title>DIP</title>
-      <link>http://localhost:1313/categories/dip/</link>
+      <link>https://baoyuxiang.fun/categories/dip/</link>
       <pubDate>Tue, 22 Oct 2024 16:22:03 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/categories/dip/</guid>
+      <guid>https://baoyuxiang.fun/categories/dip/</guid>
       <description></description>
     </item>
     <item>
       <title>计算机科学</title>
-      <link>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</link>
+      <link>https://baoyuxiang.fun/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</link>
       <pubDate>Mon, 21 Oct 2024 00:02:46 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</guid>
+      <guid>https://baoyuxiang.fun/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/</guid>
       <description></description>
     </item>
   </channel>

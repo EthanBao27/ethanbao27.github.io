@@ -1,25 +1,25 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - 鲍宇翔的博客</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://baoyuxiang.fun/posts/</link>
         <description>All Posts | 鲍宇翔的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
-            <webMaster>522425561@qq.com (Ethan Bao)</webMaster><lastBuildDate>Thu, 15 May 2025 18:15:56 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>522425561@qq.com (Ethan Bao)</webMaster><lastBuildDate>Thu, 15 May 2025 18:15:56 &#43;0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/posts/" rel="self" type="application/rss+xml" /><item>
     <title>快要结束的大三和本科生涯</title>
-    <link>http://localhost:1313/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
+    <link>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
     <pubDate>Thu, 15 May 2025 18:15:56 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
+    <guid>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
     <description><![CDATA[<h3 id="再见大三和上课的日子">再见，大三和上课的日子！</h3>
 <p>是的，我的大三生活快结束了。</p>
 <p>本来以为大学四年是很长的一段时间，结果发现也不过如此，从 2022 年进入上海大学 SHU 修读计算机专业开始，转眼间已经接近三个年头了。回想起来这三年，似乎我学到了很多，成长了不少，又似乎抛弃了某些…</p>]]></description>
 </item>
 <item>
     <title>软件工程期末复习</title>
-    <link>http://localhost:1313/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+    <link>https://baoyuxiang.fun/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
     <pubDate>Fri, 07 Mar 2025 21:16:46 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+    <guid>https://baoyuxiang.fun/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
     <description><![CDATA[<h1 id="软工期末复习">软工期末复习</h1>
 <p>[TOC]</p>
 <h2 id="第-1-章-软件工程学概述">第 1 章 软件工程学概述</h2>
@@ -29,10 +29,10 @@
 </item>
 <item>
     <title>TailwindCSS基本使用</title>
-    <link>http://localhost:1313/taiwind-css%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+    <link>https://baoyuxiang.fun/taiwind-css%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
     <pubDate>Sat, 14 Dec 2024 23:55:24 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/taiwind-css%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
+    <guid>https://baoyuxiang.fun/taiwind-css%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
     <description><![CDATA[<h1 id="taiwindcss">Taiwindcss</h1>
 <ul>
 <li>用于 react 的 application ui 组件库</li>
@@ -77,10 +77,10 @@
 </item>
 <item>
     <title>计算机网络考试复习（详细版）</title>
-    <link>http://localhost:1313/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</link>
+    <link>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</link>
     <pubDate>Sun, 03 Nov 2024 21:13:40 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</guid>
+    <guid>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</guid>
     <description><![CDATA[<h1 id="计算机网络总复习">计算机网络总复习</h1>
 <h2 id="第一章-概述">第一章 概述</h2>
 <p>计算机网络：结点 node（计算器、交换机、路由器）+链路 link</p>
@@ -92,29 +92,29 @@
 </item>
 <item>
     <title>🛜五层体系结构协议复习</title>
-    <link>http://localhost:1313/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</link>
+    <link>https://baoyuxiang.fun/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</link>
     <pubDate>Sun, 27 Oct 2024 20:00:00 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</guid>
+    <guid>https://baoyuxiang.fun/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/</guid>
     <description><![CDATA[<h1 id="-五层体系结构协议复习">🛜 五层体系结构协议复习</h1>
 <p>首先我们需要了解为什么计算机网络要学习<strong>五层结构模型（TCP/IP 模型）</strong>，因为这更简化，便于我们了解实际网络协议，并且更贴近现实的网络组成。</p>]]></description>
 </item>
 <item>
     <title>OS：处理机调度与死锁🔒</title>
-    <link>http://localhost:1313/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/</link>
+    <link>https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/</link>
     <pubDate>Sat, 26 Oct 2024 13:43:00 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/</guid>
+    <guid>https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/</guid>
     <description><![CDATA[<h1 id="处理机调度与死锁-">处理机调度与死锁 🔒</h1>
 <blockquote>
 <p>Q:如果系统只有一个 cpu,有两个进程要运行.进程 A 的运行时间将是 1 小时,进程 B 的运行时间是 1 分钟.那么认为操作系统让哪个进程先运行比较合理?</p>]]></description>
 </item>
 <item>
     <title>最常见的图像压缩算法：JPEG</title>
-    <link>http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</link>
+    <link>https://baoyuxiang.fun/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</link>
     <pubDate>Tue, 22 Oct 2024 16:22:03 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</guid>
+    <guid>https://baoyuxiang.fun/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</guid>
     <description><![CDATA[<h1 id="dip-jpeg-图像压缩">DIP-JPEG 图像压缩</h1>
 <h2 id="为什么-jpefg-有用">为什么 JPEFG 有用</h2>
 <p>人类眼镜的细胞对图像的感知程度，亮度比色度感知强烈的多。</p>
@@ -126,20 +126,20 @@
 </item>
 <item>
     <title>Three.js简介</title>
-    <link>http://localhost:1313/three-js%E7%AE%80%E4%BB%8B/</link>
+    <link>https://baoyuxiang.fun/three-js%E7%AE%80%E4%BB%8B/</link>
     <pubDate>Mon, 21 Oct 2024 16:33:28 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/three-js%E7%AE%80%E4%BB%8B/</guid>
+    <guid>https://baoyuxiang.fun/three-js%E7%AE%80%E4%BB%8B/</guid>
     <description><![CDATA[<h1 id="threejs-介绍">Three.Js 介绍</h1>
 <p>Three.js 由 Ricardo Cabello 在 2010 四月于 GitHub 首次发布。</p>
 <p>Three.js 是一个跨浏览器的使用 JavaScript 函数库或 API 来在网页浏览器中创建和展示三维计算机图形的开源通用 3D 代码库。Three.js 使用 WebGL 渲染图形，也可通过插件使用 WebGPU（实验性）、SVG 和 CSS3D 渲染器。源代码托管在 GitHub。</p>]]></description>
 </item>
 <item>
     <title>axios简介</title>
-    <link>http://localhost:1313/axios%E7%AE%80%E4%BB%8B/</link>
+    <link>https://baoyuxiang.fun/axios%E7%AE%80%E4%BB%8B/</link>
     <pubDate>Mon, 21 Oct 2024 16:25:25 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/axios%E7%AE%80%E4%BB%8B/</guid>
+    <guid>https://baoyuxiang.fun/axios%E7%AE%80%E4%BB%8B/</guid>
     <description><![CDATA[<h1 id="axios">axios</h1>
 <p></p>
 <p>axios 对原生 ajax 进行了封装，简化书写，快速开发，用于发送<strong>异步</strong>请求。</p>
@@ -149,10 +149,10 @@
 </item>
 <item>
     <title>计算机科学分支 CS Map</title>
-    <link>http://localhost:1313/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%88%86%E6%94%AF/</link>
+    <link>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%88%86%E6%94%AF/</link>
     <pubDate>Mon, 21 Oct 2024 00:02:46 &#43;0800</pubDate>
     <author>Ethan Bao</author>
-    <guid>http://localhost:1313/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%88%86%E6%94%AF/</guid>
+    <guid>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%88%86%E6%94%AF/</guid>
     <description><![CDATA[<h1 id="computer-science-map">Computer Science Map</h1>
 <h2 id="计算机科学基础理论theroy">计算机科学基础理论（Theroy）</h2>
 <h5 id="1-计算性理论-computability-theroy">1. 计算性理论 computability theroy</h5>
