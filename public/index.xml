@@ -134,7 +134,6 @@
     <guid>https://baoyuxiang.fun/three-js%E7%AE%80%E4%BB%8B/</guid>
     <description><![CDATA[<h1 id="threejs-介绍">Three.Js 介绍</h1>
 <p>Three.js 由 Ricardo Cabello 在 2010 四月于 GitHub 首次发布。</p>
-<p></p>
 <p>Three.js 是一个跨浏览器的使用 JavaScript 函数库或 API 来在网页浏览器中创建和展示三维计算机图形的开源通用 3D 代码库。Three.js 使用 WebGL 渲染图形，也可通过插件使用 WebGPU（实验性）、SVG 和 CSS3D 渲染器。源代码托管在 GitHub。</p>]]></description>
 </item>
 <item>
