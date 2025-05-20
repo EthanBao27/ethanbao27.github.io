@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机科学导航 on 鲍宇翔的博客</title>
+    <link>https://baoyuxiang.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%88%AA/</link>
+    <description>Recent content in 计算机科学导航 on 鲍宇翔的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
+    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
+    <lastBuildDate>Mon, 21 Oct 2024 00:02:46 +0800</lastBuildDate>
+    <atom:link href="https://baoyuxiang.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%88%AA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机科学分支 CS Map</title>
+      <link>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%88%86%E6%94%AF/</link>
+      <pubDate>Mon, 21 Oct 2024 00:02:46 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
+      <guid>https://baoyuxiang.fun/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%88%86%E6%94%AF/</guid>
+      <description>&lt;h1 id=&#34;computer-science-map&#34;&gt;Computer Science Map&lt;/h1&gt;&#xA;&lt;h2 id=&#34;计算机科学基础理论theroy&#34;&gt;计算机科学基础理论（Theroy）&lt;/h2&gt;&#xA;&lt;h5 id=&#34;1-计算性理论-computability-theroy&#34;&gt;1. 计算性理论 computability theroy&lt;/h5&gt;&#xA;&lt;h5 id=&#34;2-算法-algorithm&#34;&gt;2. 算法 algorithm&lt;/h5&gt;&#xA;&lt;h5 id=&#34;3-信息论-information-theroy&#34;&gt;3. 信息论 information theroy&lt;/h5&gt;&#xA;&lt;h5 id=&#34;4-密码学-cryptography&#34;&gt;4. 密码学 cryptography&lt;/h5&gt;&#xA;&lt;h5 id=&#34;5-其他逻辑图论计算几何自动机理论量子计算并行编程形式化方法数据结构&#34;&gt;5. 其他（逻辑、图论、计算几何、自动机理论、量子计算、并行编程、形式化方法、数据结构）&lt;/h5&gt;&#xA;&lt;h2 id=&#34;计算机工程engineering&#34;&gt;计算机工程（engineering）&lt;/h2&gt;&#xA;&lt;h5 id=&#34;1-处理机调度&#34;&gt;1. 处理机调度&lt;/h5&gt;&#xA;&lt;h5 id=&#34;2-计算机体系结构-architecure&#34;&gt;2. 计算机体系结构 architecure&lt;/h5&gt;&#xA;&lt;h5 id=&#34;3-软件与编程语言&#34;&gt;3. 软件与编程语言&lt;/h5&gt;&#xA;&lt;h5 id=&#34;4-编译器-compilers&#34;&gt;4. 编译器 compilers&lt;/h5&gt;&#xA;&lt;h5 id=&#34;5-操作系统-operating-systems&#34;&gt;5. 操作系统 operating systems&lt;/h5&gt;&#xA;&lt;h5 id=&#34;6-软件工程-software-engineering&#34;&gt;6. 软件工程 software engineering&lt;/h5&gt;&#xA;&lt;h5 id=&#34;7-网络-networking&#34;&gt;7. 网络 networking&lt;/h5&gt;&#xA;&lt;h5 id=&#34;8-数据管理-data-management&#34;&gt;8. 数据管理 data management&lt;/h5&gt;&#xA;&lt;h5 id=&#34;9-性能-performance&#34;&gt;9. 性能 performance&lt;/h5&gt;&#xA;&lt;h5 id=&#34;10-图形学-graphics&#34;&gt;10. 图形学 graphics&lt;/h5&gt;&#xA;&lt;h2 id=&#34;应用applications&#34;&gt;应用（Applications）&lt;/h2&gt;&#xA;&lt;h5 id=&#34;1-优化-optimization&#34;&gt;1. 优化 optimization&lt;/h5&gt;&#xA;&lt;h5 id=&#34;2-布尔可满足性问题-boolean-satisfiabilitysat&#34;&gt;2. 布尔可满足性问题 boolean satisfiability（SAT）&lt;/h5&gt;&#xA;&lt;h5 id=&#34;3-人工智能-artificial-intelligence&#34;&gt;3. 人工智能 artificial intelligence&lt;/h5&gt;&#xA;&lt;h5 id=&#34;4-机器学习-machine-learning&#34;&gt;4. 机器学习 machine learning&lt;/h5&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;计算机视觉 computer vision&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;图像处理技术 image processing techniques&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;自然语言处理 natural language processing&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h5 id=&#34;5-大数据-big-data&#34;&gt;5. 大数据 big data&lt;/h5&gt;&#xA;&lt;h5 id=&#34;6-物联网-internet-of-things&#34;&gt;6. 物联网 Internet of things&lt;/h5&gt;&#xA;&lt;h5 id=&#34;7-hacking&#34;&gt;7. hacking&lt;/h5&gt;&#xA;&lt;h5 id=&#34;8-计算科学-computational-science&#34;&gt;8. 计算科学 computational science&lt;/h5&gt;&#xA;&lt;h5 id=&#34;9-超算-supter-computing&#34;&gt;9. 超算 supter computing&lt;/h5&gt;&#xA;&lt;h5 id=&#34;10-人机交互-human-computer-interacting&#34;&gt;10. 人机交互 human computer interacting&lt;/h5&gt;&#xA;&lt;h5 id=&#34;11-机器人学-robitics&#34;&gt;11。 机器人学 robitics&lt;/h5&gt;</description>
+    </item>
+  </channel>
+</rss>
