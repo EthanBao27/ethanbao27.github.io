@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>想法 on 鲍宇翔的博客</title>
-    <link>https://baoyuxiang.fun/tags/%E6%83%B3%E6%B3%95/</link>
+    <link>http://localhost:1313/tags/%E6%83%B3%E6%B3%95/</link>
     <description>Recent content in 想法 on 鲍宇翔的博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
     <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
     <lastBuildDate>Thu, 15 May 2025 18:15:56 +0800</lastBuildDate>
-    <atom:link href="https://baoyuxiang.fun/tags/%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>快要结束的大三和本科生涯</title>
-      <link>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
+      <link>http://localhost:1313/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
       <pubDate>Thu, 15 May 2025 18:15:56 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
+      <guid>http://localhost:1313/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
       <description>&lt;h3 id=&#34;再见大三和上课的日子&#34;&gt;再见，大三和上课的日子！&lt;/h3&gt;&#xA;&lt;p&gt;是的，我的大三生活快结束了。&lt;/p&gt;&#xA;&lt;p&gt;本来以为大学四年是很长的一段时间，结果发现也不过如此，从 2022 年进入上海大学 SHU 修读计算机专业开始，转眼间已经接近三个年头了。回想起来这三年，似乎我学到了很多，成长了不少，又似乎抛弃了某些…&lt;/p&gt;</description>
     </item>
   </channel>
