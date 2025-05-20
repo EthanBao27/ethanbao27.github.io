@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>OS：处理机调度与死锁🔒 - 鲍宇翔的博客</title><meta name="Description" content="鲍宇翔的博客，记录生活中的点滴，分享一些有趣的事物。"><meta property="og:url" content="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/">
+  <meta property="og:site_name" content="鲍宇翔的博客">
+  <meta property="og:title" content="OS：处理机调度与死锁🔒">
+  <meta property="og:description" content="处理机调度与死锁 🔒 Q:如果系统只有一个 cpu,有两个进程要运行.进程 A 的运行时间将是 1 小时,进程 B 的运行时间是 1 分钟.那么认为操作系统让哪个进程先运行比较合理?">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-26T13:43:00+08:00">
+    <meta property="article:modified_time" content="2024-10-26T13:43:00+08:00">
+    <meta property="article:tag" content="操作系统">
+    <meta property="article:tag" content="死锁">
+    <meta property="article:tag" content="复习">
+    <meta property="og:image" content="https://baoyuxiang.fun/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://baoyuxiang.fun/images/avatar.png">
+  <meta name="twitter:title" content="OS：处理机调度与死锁🔒">
+  <meta name="twitter:description" content="处理机调度与死锁 🔒 Q:如果系统只有一个 cpu,有两个进程要运行.进程 A 的运行时间将是 1 小时,进程 B 的运行时间是 1 分钟.那么认为操作系统让哪个进程先运行比较合理?">
+<meta name="application-name" content="鲍宇翔的博客">
+<meta name="apple-mobile-web-app-title" content="鲍宇翔的博客"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" /><link rel="prev" href="https://baoyuxiang.fun/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" /><link rel="next" href="https://baoyuxiang.fun/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "OS：处理机调度与死锁🔒",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/baoyuxiang.fun\/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81\/"
+        },"genre": "posts","keywords": "操作系统, 死锁, 复习","wordcount":  3056 ,
+        "url": "https:\/\/baoyuxiang.fun\/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81\/","datePublished": "2024-10-26T13:43:00+08:00","dateModified": "2024-10-26T13:43:00+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Ethan Bao"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="鲍宇翔的博客"><span class="header-title-pre"><i class="fas fa-rocket"></i> </span>Bao&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于我"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="鲍宇翔的博客"><span class="header-title-pre"><i class="fas fa-rocket"></i> </span>Bao&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于我">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">OS：处理机调度与死锁🔒</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="wx:epoch_fish" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ethan Bao</a></span>&nbsp;<span class="post-category">included in <a href="/categories/os/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>OS</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-10-26">2024-10-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3056 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#调度">调度</a>
+      <ul>
+        <li><a href="#调度层次">调度层次</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-周转时间-turnaround-time">1. 周转时间 (Turnaround Time)</a></li>
+    <li><a href="#2-平均周转时间-average-turnaround-time">2. 平均周转时间 (Average Turnaround Time)</a></li>
+    <li><a href="#3-带权周转时间-weighted-turnaround-time">3. 带权周转时间 (Weighted Turnaround Time)</a></li>
+    <li><a href="#4-平均带权周转时间-average-weighted-turnaround-time">4. 平均带权周转时间 (Average Weighted Turnaround Time)</a></li>
+    <li><a href="#调度算法">调度算法</a>
+      <ul>
+        <li><a href="#先来先服务fcfs">先来先服务（FCFS）</a></li>
+        <li><a href="#短作业进程优先sf">短作业（进程）优先（SF）</a></li>
+        <li><a href="#高响应比优先hrn">高响应比优先（HRN）</a></li>
+        <li><a href="#最高优先权hpf">最高优先权（HPF）</a></li>
+        <li><a href="#时间片轮转rr">时间片轮转（RR）</a></li>
+        <li><a href="#多级队列调度">多级队列调度</a></li>
+        <li><a href="#多级反馈队列调度算法">多级反馈队列调度算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#死锁">死锁</a>
+      <ul>
+        <li><a href="#概述">概述</a></li>
+        <li><a href="#产生原因">产生原因</a></li>
+        <li><a href="#产生死锁必要条件">产生死锁必要条件</a></li>
+        <li><a href="#处理死锁的基本方法">处理死锁的基本方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#银行家算法-">银行家算法 🏦</a>
+      <ul>
+        <li><a href="#安全序列">安全序列</a></li>
+        <li><a href="#算法实现">算法实现</a></li>
+      </ul>
+    </li>
+    <li><a href="#解除死锁">解除死锁</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="处理机调度与死锁-">处理机调度与死锁 🔒</h1>
+<blockquote>
+<p>Q:如果系统只有一个 cpu,有两个进程要运行.进程 A 的运行时间将是 1 小时,进程 B 的运行时间是 1 分钟.那么认为操作系统让哪个进程先运行比较合理?</p></blockquote>
+<p>A：与操作系统的调度策略有关，即更重视优先级还是到来顺序、时长等因素。</p>
+<h2 id="调度">调度</h2>
+<p>对处理机（CPU）资源进行分配。</p>
+<h3 id="调度层次">调度层次</h3>
+<p>高级（作业）调度、中级（内存）调度、低级（进程）调度。</p>
+<p>区分主要是运行频率，<strong>低级调度最频繁</strong>，也是重点。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/diaodu1.png"
+        data-srcset="/images/diaodu1.png, /images/diaodu1.png 1.5x, /images/diaodu1.png 2x"
+        data-sizes="auto"
+        alt="/images/diaodu1.png"
+        title="调度等级" /></p>
+<p><strong>后备队列</strong>（Spooling Queue 或 Backup Queue）是指操作系统或系统调度过程中用于存放<strong>尚未进入内存执行的进程或任务</strong>的队列。根据实际情况，后备队列可以位于<strong>外存</strong>或与外存相关的区域，而非内存。</p>
+<p>作业（Job）：一组需要完成的任务或程序的组合。</p>
+<ul>
+<li>高级调度：决定哪些后备队列中的（外存中的）作业调入内存并创建进程与分配资源。</li>
+<li>中级调度：决定哪些进程<u>可参与竞争 CPU</u>。（内存-&gt;外存）</li>
+<li>低级调度：决定哪个进程可以<u>获得 CPU。</u></li>
+</ul>
+<p>低级调度有两种方式：</p>
+<ol>
+<li>非抢占式：一直执行完成或自动阻塞。</li>
+<li>抢占式：允许其他进程依据一定规则抢占 CPU。</li>
+</ol>
+<p>（1）时间片原则、（2）优先权原则 、（3）短作业（进程）优先原则</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/diaodu2.png"
+        data-srcset="/images/diaodu2.png, /images/diaodu2.png 1.5x, /images/diaodu2.png 2x"
+        data-sizes="auto"
+        alt="/images/diaodu2.png"
+        title="调度设计" /></p>
+<h2 id="1-周转时间-turnaround-time">1. 周转时间 (Turnaround Time)</h2>
+<p>作业（进程）从提交（进入时刻）到完成的时间称为该作业的周转时间 (T_i)：</p>
+<p>$$
+T_i = \text{完成时刻} - \text{进入时刻}
+$$</p>
+<h2 id="2-平均周转时间-average-turnaround-time">2. 平均周转时间 (Average Turnaround Time)</h2>
+<p>平均周转时间为 (n) 个作业（进程）周转时间的平均值：</p>
+<p>$$
+T = \frac{1}{n} \left( \sum_{i=1}^{n} T_i \right)
+$$</p>
+<h2 id="3-带权周转时间-weighted-turnaround-time">3. 带权周转时间 (Weighted Turnaround Time)</h2>
+<p>作业（进程）周转时间 (T<em>i) 与实际运行时间 (T</em>{si}) 之比称为该作业的带权周转时间 (W_i)：</p>
+<p>$$
+W_i = \frac{T_i}{T_{si}}
+$$</p>
+<h2 id="4-平均带权周转时间-average-weighted-turnaround-time">4. 平均带权周转时间 (Average Weighted Turnaround Time)</h2>
+<p>平均带权周转时间为 (n) 个作业（进程）带权周转时间的平均值：</p>
+<p>$$
+W = \frac{1}{n} \left( \sum_{i=1}^{n} \frac{T_i}{T_{si}} \right)
+$$</p>
+<h2 id="调度算法">调度算法</h2>
+<p>根据系统的资源分配策略所规定的资源分配方法</p>
+<ol>
+<li>
+<h3 id="先来先服务fcfs">先来先服务（FCFS）</h3>
+</li>
+</ol>
+<p>​ 作业调度：从后背队列选择一个或多个最先进入队列的作业</p>
+<ol start="2">
+<li>
+<h3 id="短作业进程优先sf">短作业（进程）优先（SF）</h3>
+<p>从就绪队列中选择 CPU 执行时间最短的作业</p>
+</li>
+<li>
+<h3 id="高响应比优先hrn">高响应比优先（HRN）</h3>
+</li>
+</ol>
+<p>​ 选择待调度的作业中响应比最高的</p>
+<p>$$
+R_p = \frac{W_i + S_i}{S_i}
+$$</p>
+<p>​ Rp:响应比</p>
+<p>​ Wi：已等待时间</p>
+<p>​ Si：要求服务时间</p>
+<ol start="4">
+<li>
+<h3 id="最高优先权hpf">最高优先权（HPF）</h3>
+</li>
+</ol>
+<p>​ 选择优先权最高的，其中又分为：</p>
+<p>​ <strong>静态优先权</strong></p>
+<p>​ <strong>动态优先权</strong></p>
+<ol start="5">
+<li>
+<h3 id="时间片轮转rr">时间片轮转（RR）</h3>
+</li>
+</ol>
+<p>​ 每次为一个进程执行一个时间片 T</p>
+<ol start="6">
+<li>
+<h3 id="多级队列调度">多级队列调度</h3>
+</li>
+</ol>
+<p>​ 将就绪队列分为多种不同队列，不同队列使用不同调度算法</p>
+<p>​ <img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/diaodu0.png"
+        data-srcset="/images/diaodu0.png, /images/diaodu0.png 1.5x, /images/diaodu0.png 2x"
+        data-sizes="auto"
+        alt="/images/diaodu0.png"
+        title="img" /></p>
+<ol start="7">
+<li>
+<h3 id="多级反馈队列调度算法">多级反馈队列调度算法</h3>
+</li>
+</ol>
+<p>​ 设置多个就绪队列，从高到低赋予不同优先级，每个队列采用 RR 算法，时间片长度依次增加。</p>
+<h2 id="死锁">死锁</h2>
+<h3 id="概述">概述</h3>
+<p><strong>死锁</strong>是指多个进程因竞争资源而造成的一种僵局，若无外力作用，这些进程都将永远不能再向前进。</p>
+<h3 id="产生原因">产生原因</h3>
+<ol>
+<li><strong>资源竞争</strong></li>
+</ol>
+<ul>
+<li>
+<p>当两个或以上进程需要两个或以上资源(非剥夺性资源 or 临时性资源)：</p>
+<ol>
+<li>可剥夺性资源</li>
+<li>非剥夺性资源</li>
+<li>临时性资源：由某进程产生，由另一进程使用的资源。（信号量）</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p><strong>进程推进非法</strong></p>
+<p>请求和释放资源的顺序不当。</p>
+</li>
+</ol>
+<h3 id="产生死锁必要条件">产生死锁必要条件</h3>
+<ol>
+<li>
+<p>互斥条件：请求的资源为<strong>临界资源</strong></p>
+<p><strong>临界资源（Critical Resource）</strong>：指<strong>多个进程或线程在同一时间只能由一个进程使用</strong>的资源。对这种资源的访问必须受到严格的控制，以防止数据<strong>不一致</strong>或<strong>竞争</strong>问题的发生。典型的临界资源包括<strong>共享内存、文件、数据库</strong>等。</p>
+<blockquote>
+<p>可见，访问临界资源必须要有<strong>同步或互斥机制（同步：信号量，互斥：锁）！！</strong></p></blockquote>
+</li>
+<li>
+<p>请求和保持条件：申请新资源，保持旧资源</p>
+</li>
+<li>
+<p>不剥夺条件：已获得的资源，在使用完之前，不被外力剥夺。</p>
+</li>
+<li>
+<p>环路等待条件：互相等待资源</p>
+</li>
+</ol>
+<h3 id="处理死锁的基本方法">处理死锁的基本方法</h3>
+<ol>
+<li>预防死锁：设置限制条件，破坏死锁产生</li>
+<li>避免死锁：资源分配的动态方法</li>
+<li>检测死锁：采取措施，解除死锁</li>
+<li>解除死锁：剥夺资源或撤销进程回收 ♻️ 资源</li>
+</ol>
+<h2 id="银行家算法-">银行家算法 🏦</h2>
+<h3 id="安全序列">安全序列</h3>
+<p>安全状态，是指系统能按某种进程顺序(P1, P2, …，Pn)(称〈P1, P2, …, Pn〉序列为安全序列)，来为每个进程 Pi 分配其所需资源，直至满足每个进程对资源的最大需求，使每个进程都可顺利地完成。如果系统无法找到这样一个安全序列，则称系统处于不安全状态。</p>
+<p>​ • <strong>可用资源</strong>：目前系统中剩余的可用资源数量。</p>
+<p>​ • <strong>最大需求</strong>：每个进程所需的最大资源量。</p>
+<p>​ • <strong>已分配资源</strong>：每个进程当前占用的资源量。</p>
+<p>需求 = <strong>最大需求</strong> - <strong>已分配资源</strong></p>
+<p>要找到一个<strong>安全序列</strong>，需要按照银行家算法，依次寻找一个可以满足当前可用资源条件的进程，完成该进程后，释放其资源，增加可用资源。重复这个过程，直到所有进程都完成。</p>
+<h3 id="算法实现">算法实现</h3>
+<p>核心：根据系统是否处于安全状态，来决定分配资源与否。</p>
+<p>对于银行家算法的具体实现主要由以下几个数据结构：</p>
+<p>1、可利用资源向量 Available：</p>
+<p>一个含有 m 个元素的数组，其中的每一个元素代表一类可利用的资源数目</p>
+<p>2、最大需求矩阵 Max：</p>
+<p>一个 n×m 的矩阵，它定义了系统中 n 个进程中的每一个进程对 m 类资源的最大需求</p>
+<p>3、分配矩阵 Allocation：</p>
+<p>一个 n×m 的矩阵，它定义了系统中每一类资源当前已分配给每一进程的资源数</p>
+<p>4、需求矩阵 Need：</p>
+<p>一个 n×m 的矩阵，用以表示每一个进程还需的各类资源数</p>
+<p>Need［i,j］=Max［i,j］-Allocation［i,j］</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/bank.png"
+        data-srcset="/images/bank.png, /images/bank.png 1.5x, /images/bank.png 2x"
+        data-sizes="auto"
+        alt="/images/bank.png"
+        title="银行家算法" /></p>
+<p>设 Requesti 是进程 Pi 的请求向量，如果 Requesti［j］=K，表示进程 Pi 需要 K 个 Rj 类型的资源。当 Pi 发出资源请求后，系统按下述步骤进行检查：</p>
+<p>(1) 如果 Requesti［j］≤Need［i,j］，便转向步骤 2；否则认为出错，因为它所需要的资源数已超过它所宣布的最大值。</p>
+<p>(2) 如果 Requesti［j］≤Available［j］，便转向步骤(3)；否则， 表示尚无足够资源，Pi 须等待。</p>
+<p>(3) 系统试探着把资源分配给进程 Pi，并修改下面数据结构中的数值：</p>
+<p>① Available［j］∶=Available［j］-Requesti［j］;</p>
+<p>② Allocation［i,j］∶=Allocation［i,j］+Requesti［j］;</p>
+<p>③ Need［i,j］∶=Need［i,j］-Requesti［j］;</p>
+<p>(4) 系统执行安全性算法，检查此次资源分配后，系统是否处于安全状态。若安全，才正式将资源分配给进程 Pi，以完成本次分配；否则， 将本次的试探分配作废，恢复原来的资源分配状态，让进程 Pi 等待。
+对于系统整体安全状态的检查，引入安全性算法，核心实现如下：</p>
+<blockquote>
+<p>(1) 设置两个向量：① 工作向量 Work: 它表示系统可提供给进程继续运行所需的各类资源数目，它含有 m 个元素，在执行安全算法开始时，Work∶=Available; ② Finish: 它表示系统是否有足够的资源分配给进程，使之运行完成。开始时先做 Finish［i］∶=false; 当有足够资源分配给进程时， 再令 Finish［i］∶=true。
+(2) 从进程集合中找到一个能满足下述条件的进程：  ① Finish［i］=false; ② Need［i,j］≤Work［j］； 若找到， 执行步骤(3)， 否则，执行步骤(4)。<br>
+(3) 当进程 Pi 获得资源后，可顺利执行，直至完成，并释放出分配给它的资源，故应执行： Work［j］∶=Work［i］+Allocation［i,j］; Finish［i］∶=true; go to step 2;
+(4) 如果所有进程的 Finish［i］=true 都满足， 则表示系统处于安全状态；否则，系统处于不安全状态。</p></blockquote>
+<p>银行家算法的缺点如下：</p>
+<p>1.很少有进程能够在运行前就知道其所需资源的最大值</p>
+<p>2.而且进程数也不是固定的，往往在不断地变化（如新用户登录或退出）</p>
+<p>3.原本可用的资源也可能突然间变成不可用（如磁带机可能坏掉）</p>
+<p>4.银行家算法的开销较大，实时性不是很好</p>
+<h2 id="解除死锁">解除死锁</h2>
+<p>利用死锁定理</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/diaodu3.png"
+        data-srcset="/images/diaodu3.png, /images/diaodu3.png 1.5x, /images/diaodu3.png 2x"
+        data-sizes="auto"
+        alt="/images/diaodu3.png"
+        title="死锁解除" /></p>
+<p>对于死锁的解除，即**（1）剥夺资源，(2) 撤消进程**。</p>
+<p>实用而又简便的方法是： <strong>逐个</strong>撤消那些<strong>代价最小</strong>的进程，或者，使<strong>撤消进程的数量最少</strong>，直至获得为解除死锁所需要的足够可用的资源。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-10-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-hashtag="操作系统"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://baoyuxiang.fun/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/" data-title="OS：处理机调度与死锁🔒"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>,&nbsp;<a href="/tags/%E6%AD%BB%E9%94%81/">死锁</a>,&nbsp;<a href="/tags/%E5%A4%8D%E4%B9%A0/">复习</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/" class="prev" rel="prev" title="最常见的图像压缩算法：JPEG"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>最常见的图像压缩算法：JPEG</a>
+            <a href="/%E4%BA%94%E5%B1%82%E7%BB%93%E6%9E%84%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A0/" class="next" rel="next" title="🛜五层体系结构协议复习">🛜五层体系结构协议复习<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.0"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="#ZgotmplZ" target="_blank">Ethan Bao</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">沪ICP备2025116601号-1</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"EthanBao27/ethanbao27.github.io-comments"}},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"},"twemoji":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
