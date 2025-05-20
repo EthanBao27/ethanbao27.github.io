@@ -1215,11 +1215,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 # 隐私信息配置
 
-[privacy]
-
-  #  Google Analytics 相关隐私设置 (也能在 params.analytics.google 配置)
-
-  [privacy.googleAnalytics]
 
     # ...
 
