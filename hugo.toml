@@ -78,7 +78,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
 
-    pre = ""
+    pre = "<i class='fa-solid fa-file-lines fa-fw'></i> "
 
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
 
@@ -98,7 +98,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     identifier = "tags"
 
-    pre = ""
+    pre = "<i class='fa-solid fa-tags fa-fw'></i> "
 
     post = ""
 
@@ -114,7 +114,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
     identifier = "categories"
 
-    pre = ""
+    pre = "<i class='fa-solid fa-grip fa-fw'></i> "
 
     post = ""
 

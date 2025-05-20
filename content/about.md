@@ -7,6 +7,7 @@ draft = false
   identifier = "about"
   name       = "关于"
   weight     = 4
+  pre        = "<i class='fa-solid fa-user fa-fw'></i> "
 +++
 
 ## 关于我
