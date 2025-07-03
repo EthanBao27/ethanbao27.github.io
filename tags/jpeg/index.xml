@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JPEG on 鲍宇翔的博客</title>
+    <link>http://localhost:1313/tags/jpeg/</link>
+    <description>Recent content in JPEG on 鲍宇翔的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
+    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
+    <lastBuildDate>Tue, 22 Oct 2024 16:22:03 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jpeg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>最常见的图像压缩算法：JPEG</title>
+      <link>http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</link>
+      <pubDate>Tue, 22 Oct 2024 16:22:03 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
+      <guid>http://localhost:1313/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</guid>
+      <description>&lt;h1 id=&#34;dip-jpeg-图像压缩&#34;&gt;DIP-JPEG 图像压缩&lt;/h1&gt;&#xA;&lt;h2 id=&#34;为什么-jpefg-有用&#34;&gt;为什么 JPEFG 有用&lt;/h2&gt;&#xA;&lt;p&gt;人类眼镜的细胞对图像的感知程度，亮度比色度感知强烈的多。&lt;/p&gt;&#xA;&lt;p&gt;因此减少人类眼镜感知较弱的区域，即减少颜色的差异，就可以实现压缩。&lt;/p&gt;&#xA;&lt;h2 id=&#34;压缩步骤&#34;&gt;压缩步骤&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;首先需要进行色彩空间转换，每一个像素都有 RGB 的红绿蓝叠加，算法需要通过一个固定的公式算出&lt;strong&gt;Y（亮度）、Cb（蓝色色度）、Cr（红色色度）&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
