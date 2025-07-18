@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>实习 on 鲍宇翔的博客</title>
-    <link>http://localhost:1313/tags/%E5%AE%9E%E4%B9%A0/</link>
+    <link>https://baoyuxiang.fun/tags/%E5%AE%9E%E4%B9%A0/</link>
     <description>Recent content in 实习 on 鲍宇翔的博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
     <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
     <lastBuildDate>Thu, 03 Jul 2025 22:53:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%AE%9E%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://baoyuxiang.fun/tags/%E5%AE%9E%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>最近实习的一些心得</title>
-      <link>http://localhost:1313/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</link>
+      <link>https://baoyuxiang.fun/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</link>
       <pubDate>Thu, 03 Jul 2025 22:53:00 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</guid>
+      <guid>https://baoyuxiang.fun/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;说来也怪，为什么突然想写博客了呢。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;一是可能确实距离上次写博客有一个多月的时间了，二是在学校没有课后，我真的在思考自己的人生和未来，也觉得自己学到了一些。&#xA;确实，5月-6月我花了差不多大半个月的时间投递简历，面试，最后一家od供应链公司给出了oc。问清了是Java开发，符合我的预期，mentor性格挺好的，也乐于带教，于是我就去了。&#xA;landing前一周，&lt;strong&gt;并没有很多coding&lt;/strong&gt;的任务，大多数是在一个java项目里用spring configuration的一些注解读取配置类，然后在yaml文件里配置一些公司数据，就能自动取数，生成excel文件了，最后还要根据接口文档校对文件的表列名，没怎么写代码，倒是学了一下基础的excel操作。&lt;/p&gt;</description>
     </item>
     <item>
       <title>快要结束的大三和本科生涯</title>
-      <link>http://localhost:1313/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
+      <link>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
       <pubDate>Thu, 15 May 2025 18:15:56 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>http://localhost:1313/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
+      <guid>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
       <description>&lt;h3 id=&#34;再见大三和上课的日子&#34;&gt;再见，大三和上课的日子！&lt;/h3&gt;&#xA;&lt;p&gt;是的，我的大三生活快结束了。&lt;/p&gt;&#xA;&lt;p&gt;本来以为大学四年是很长的一段时间，结果发现也不过如此，从 2022 年进入上海大学 SHU 修读计算机专业开始，转眼间已经接近三个年头了。回想起来这三年，似乎我学到了很多，成长了不少，又似乎抛弃了某些…&lt;/p&gt;</description>
     </item>
   </channel>
