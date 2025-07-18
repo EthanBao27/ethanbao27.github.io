@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>自我 on 鲍宇翔的博客</title>
+    <title>自我 on Blowfish</title>
     <link>https://baoyuxiang.fun/categories/%E8%87%AA%E6%88%91/</link>
-    <description>Recent content in 自我 on 鲍宇翔的博客</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
-    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
-    <lastBuildDate>Thu, 03 Jul 2025 22:53:00 +0800</lastBuildDate>
-    <atom:link href="https://baoyuxiang.fun/categories/%E8%87%AA%E6%88%91/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in 自我 on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>522425561@qq.com (鲍宇翔)</managingEditor>
+    <webMaster>522425561@qq.com (鲍宇翔)</webMaster>
+    <copyright>© 2025 鲍宇翔</copyright>
+    <lastBuildDate>Thu, 03 Jul 2025 22:53:00 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/categories/%E8%87%AA%E6%88%91/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>最近实习的一些心得</title>
-      <link>https://baoyuxiang.fun/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</link>
-      <pubDate>Thu, 03 Jul 2025 22:53:00 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>https://baoyuxiang.fun/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;说来也怪，为什么突然想写博客了呢。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;一是可能确实距离上次写博客有一个多月的时间了，二是在学校没有课后，我真的在思考自己的人生和未来，也觉得自己学到了一些。&#xA;确实，5月-6月我花了差不多大半个月的时间投递简历，面试，最后一家od供应链公司给出了oc。问清了是Java开发，符合我的预期，mentor性格挺好的，也乐于带教，于是我就去了。&#xA;landing前一周，&lt;strong&gt;并没有很多coding&lt;/strong&gt;的任务，大多数是在一个java项目里用spring configuration的一些注解读取配置类，然后在yaml文件里配置一些公司数据，就能自动取数，生成excel文件了，最后还要根据接口文档校对文件的表列名，没怎么写代码，倒是学了一下基础的excel操作。&lt;/p&gt;</description>
+      <link>https://baoyuxiang.fun/posts/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Thu, 03 Jul 2025 22:53:00 +0800</pubDate>
+      <author>522425561@qq.com (鲍宇翔)</author>
+      <guid>https://baoyuxiang.fun/posts/%E6%9C%80%E8%BF%91%E5%AE%9E%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;说来也怪，为什么突然想写博客了呢。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;一是可能确实距离上次写博客有一个多月的时间了，二是在学校没有课后，我真的在思考自己的人生和未来，也觉得自己学到了一些。
+确实，5月-6月我花了差不多大半个月的时间投递简历，面试，最后一家od供应链公司给出了oc。问清了是Java开发，符合我的预期，mentor性格挺好的，也乐于带教，于是我就去了。
+landing前一周，&lt;strong&gt;并没有很多coding&lt;/strong&gt;的任务，大多数是在一个java项目里用spring configuration的一些注解读取配置类，然后在yaml文件里配置一些公司数据，就能自动取数，生成excel文件了，最后还要根据接口文档校对文件的表列名，没怎么写代码，倒是学了一下基础的excel操作。&lt;/p&gt;
+&lt;p&gt;第二周逐渐开始熟悉公司业务，接了一个&lt;code&gt;数据同步平台&lt;/code&gt;的项目，这个项目业务开始比较复杂了，属于公司内部人事管理系统，需要比较熟练的&lt;strong&gt;java Web Http请求基础&lt;/strong&gt;，以及&lt;strong&gt;序列化、反序列化&lt;/strong&gt;的能力，用到jackson包，并且要&lt;strong&gt;熟悉springboot一些常用注解&lt;/strong&gt;，和&lt;strong&gt;jpa&lt;/strong&gt;等数据库访问的操作，需要比较好的面向对象封装能力。这三天还是比较锻炼我的，一个是锻炼阅读代码的能力，还有一个是自己的抗压能力，每天工作8小时几乎一直在看代码，从一点也不会的小白，一直问mentor问题，不断的NullPointerException，到自己逐渐学会熟练debugger，学会封装方法和类，异常处理，日志处理的能力，coding能力所及绝对是有比较大的提升的。&lt;/p&gt;
+
+&lt;h4 class=&#34;relative group&#34;&gt;聊聊生活方面 
+    &lt;div id=&#34;聊聊生活方面&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%81%8a%e8%81%8a%e7%94%9f%e6%b4%bb%e6%96%b9%e9%9d%a2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h4&gt;
+&lt;p&gt;公司的通勤稍微有点&lt;strong&gt;耗时&lt;/strong&gt;，现在基本每天都要7点15分起床，8点半前到公司，下午5点半下班，有时候会加班10-20分钟，但是mentor是不会催促我的，之前都是我自己心里觉得有活没干完不好意思走，所以自己加了会班，总体上，公司有比较严格的&lt;strong&gt;上班打卡&lt;/strong&gt;制度和&lt;strong&gt;着装要求&lt;/strong&gt;制度，以及直属领导脾气有点暴躁之外，其他地方还算好。环境处于市中心，整洁比较高档，楼下是商业街区，想要吃饭比较方便。&lt;/p&gt;
+&lt;p&gt;我最近的感受是，自己每天都睡的很晚，最近有些焦虑，一是因为未来大四&lt;u&gt;申请香港学校硕士&lt;/u&gt;的问题，我并不能保证自己一定能申请的上，且对于职业规划，我也不是百分百确定以后要当程序员，因为我在上海，本地公务员无论从薪资待遇还是压力上，都基本上优秀于私企员工。父母极力推崇公务员，所以我在考虑要不要将其作为未来规划准备。&lt;/p&gt;
+&lt;p&gt;希望未来一个月，我能更好处理睡眠、学业、事业、生活等问题，尽量保证健康的同时，继续提升coding能力，准备开始刷算法题，积极逛一下开源论坛，争取能有contribution。&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>快要结束的大三和本科生涯</title>
-      <link>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
-      <pubDate>Thu, 15 May 2025 18:15:56 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
-      <description>&lt;h3 id=&#34;再见大三和上课的日子&#34;&gt;再见，大三和上课的日子！&lt;/h3&gt;&#xA;&lt;p&gt;是的，我的大三生活快结束了。&lt;/p&gt;&#xA;&lt;p&gt;本来以为大学四年是很长的一段时间，结果发现也不过如此，从 2022 年进入上海大学 SHU 修读计算机专业开始，转眼间已经接近三个年头了。回想起来这三年，似乎我学到了很多，成长了不少，又似乎抛弃了某些…&lt;/p&gt;</description>
+      <link>https://baoyuxiang.fun/posts/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
+      <pubDate>Thu, 15 May 2025 18:15:56 +0800</pubDate>
+      <author>522425561@qq.com (鲍宇翔)</author>
+      <guid>https://baoyuxiang.fun/posts/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;再见，大三和上课的日子！ 
+    &lt;div id=&#34;再见大三和上课的日子&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%86%8d%e8%a7%81%e5%a4%a7%e4%b8%89%e5%92%8c%e4%b8%8a%e8%af%be%e7%9a%84%e6%97%a5%e5%ad%90&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;是的，我的大三生活快结束了。&lt;/p&gt;
+&lt;p&gt;本来以为大学四年是很长的一段时间，结果发现也不过如此，从 2022 年进入上海大学 SHU 修读计算机专业开始，转眼间已经接近三个年头了。回想起来这三年，似乎我学到了很多，成长了不少，又似乎抛弃了某些…&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;从大一刚入学时候的迷茫，新鲜感，到大二逐渐熟悉校园生活，大三彻底明白了学校的各种制度和逻辑，仿佛大学对我来说只是相对于高中的一个&lt;strong&gt;不同环境而已&lt;/strong&gt;。但是，真的是这样吗？&lt;/p&gt;
+&lt;p&gt;2022.7，因为 COVID-19，我的高中有一大半的日子都在封锁、口罩中度过。高考结束的那天，似乎一切都到了一个&lt;code&gt;终点&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;2022.9，搬着行李，从金山到宝山，我选了离家更远的这所 211。刚入学的时候面对什么都很兴奋，但回想起来那个时候我真是一个大 i 人。不过，我很开心自己能够在大一选择了很多社团，还加入了学院的信息部，认识了一堆有趣的朋友。&lt;/p&gt;
+&lt;p&gt;我觉得大一的日子，是甜蜜的，有很多回忆值得珍藏，很多不舍，但对于&lt;strong&gt;CS&lt;/strong&gt;的求学之路，大一基本上就是一个&lt;strong&gt;坑&lt;/strong&gt;，让我错失了一年多的学习时间。其实这并不完全怪我，&lt;em&gt;象牙塔里的人怎么能够了解外面的世界&lt;/em&gt;。大一的时候我只知道要好好准备期末考试，而其他时间玩就行了。&lt;em&gt;高级语言程序设计&lt;/em&gt;我也有好好在学，可却落得了一个不理想的成绩。我觉得计算机不是我该学的学科，逐渐开始摆烂，对 CS 丧失了兴趣。&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

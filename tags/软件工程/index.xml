@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>软件工程 on 鲍宇翔的博客</title>
+    <title>软件工程 on Blowfish</title>
     <link>https://baoyuxiang.fun/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
-    <description>Recent content in 软件工程 on 鲍宇翔的博客</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
-    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
-    <lastBuildDate>Fri, 07 Mar 2025 21:16:46 +0800</lastBuildDate>
-    <atom:link href="https://baoyuxiang.fun/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in 软件工程 on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>522425561@qq.com (鲍宇翔)</managingEditor>
+    <webMaster>522425561@qq.com (鲍宇翔)</webMaster>
+    <copyright>© 2025 鲍宇翔</copyright>
+    <lastBuildDate>Fri, 07 Mar 2025 21:16:46 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>软件工程期末复习</title>
-      <link>https://baoyuxiang.fun/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
-      <pubDate>Fri, 07 Mar 2025 21:16:46 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>https://baoyuxiang.fun/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
-      <description>&lt;h1 id=&#34;软工期末复习&#34;&gt;软工期末复习&lt;/h1&gt;&#xA;&lt;p&gt;[TOC]&lt;/p&gt;&#xA;&lt;h2 id=&#34;第-1-章-软件工程学概述&#34;&gt;第 1 章 软件工程学概述&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;开发人员对软件的认识存在偏差,传统制造业等其他工程学的思想应用在&lt;code&gt;软件开发&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;利用&lt;code&gt;管理学&lt;/code&gt;的指导思想来指导&lt;u&gt;软件开发,设计,系统与用户交互,软件测试,运维&lt;/u&gt;&lt;/p&gt;</description>
+      <link>https://baoyuxiang.fun/posts/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Fri, 07 Mar 2025 21:16:46 +0800</pubDate>
+      <author>522425561@qq.com (鲍宇翔)</author>
+      <guid>https://baoyuxiang.fun/posts/%E8%BD%AF%E5%B7%A5%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;软工期末复习 
+    &lt;div id=&#34;软工期末复习&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%bd%af%e5%b7%a5%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;第 1 章 软件工程学概述 
+    &lt;div id=&#34;第-1-章-软件工程学概述&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e7%ac%ac-1-%e7%ab%a0-%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b%e5%ad%a6%e6%a6%82%e8%bf%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开发人员对软件的认识存在偏差,传统制造业等其他工程学的思想应用在&lt;code&gt;软件开发&lt;/code&gt;&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

@@ -1,21 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JPEG on 鲍宇翔的博客</title>
+    <title>JPEG on Blowfish</title>
     <link>https://baoyuxiang.fun/tags/jpeg/</link>
-    <description>Recent content in JPEG on 鲍宇翔的博客</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
-    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
-    <lastBuildDate>Tue, 22 Oct 2024 16:22:03 +0800</lastBuildDate>
-    <atom:link href="https://baoyuxiang.fun/tags/jpeg/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in JPEG on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>522425561@qq.com (鲍宇翔)</managingEditor>
+    <webMaster>522425561@qq.com (鲍宇翔)</webMaster>
+    <copyright>© 2025 鲍宇翔</copyright>
+    <lastBuildDate>Tue, 22 Oct 2024 16:22:03 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/tags/jpeg/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>最常见的图像压缩算法：JPEG</title>
-      <link>https://baoyuxiang.fun/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</link>
-      <pubDate>Tue, 22 Oct 2024 16:22:03 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>https://baoyuxiang.fun/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</guid>
-      <description>&lt;h1 id=&#34;dip-jpeg-图像压缩&#34;&gt;DIP-JPEG 图像压缩&lt;/h1&gt;&#xA;&lt;h2 id=&#34;为什么-jpefg-有用&#34;&gt;为什么 JPEFG 有用&lt;/h2&gt;&#xA;&lt;p&gt;人类眼镜的细胞对图像的感知程度，亮度比色度感知强烈的多。&lt;/p&gt;&#xA;&lt;p&gt;因此减少人类眼镜感知较弱的区域，即减少颜色的差异，就可以实现压缩。&lt;/p&gt;&#xA;&lt;h2 id=&#34;压缩步骤&#34;&gt;压缩步骤&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;首先需要进行色彩空间转换，每一个像素都有 RGB 的红绿蓝叠加，算法需要通过一个固定的公式算出&lt;strong&gt;Y（亮度）、Cb（蓝色色度）、Cr（红色色度）&lt;/strong&gt;。&lt;/p&gt;</description>
+      <link>https://baoyuxiang.fun/posts/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</link>
+      <pubDate>Tue, 22 Oct 2024 16:22:03 +0800</pubDate>
+      <author>522425561@qq.com (鲍宇翔)</author>
+      <guid>https://baoyuxiang.fun/posts/%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95jpeg/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;DIP-JPEG 图像压缩 
+    &lt;div id=&#34;dip-jpeg-图像压缩&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dip-jpeg-%e5%9b%be%e5%83%8f%e5%8e%8b%e7%bc%a9&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;为什么 JPEFG 有用 
+    &lt;div id=&#34;为什么-jpefg-有用&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88-jpefg-%e6%9c%89%e7%94%a8&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;人类眼镜的细胞对图像的感知程度，亮度比色度感知强烈的多。&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

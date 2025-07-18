@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WebGL on 鲍宇翔的博客</title>
+    <title>WebGL on Blowfish</title>
     <link>https://baoyuxiang.fun/tags/webgl/</link>
-    <description>Recent content in WebGL on 鲍宇翔的博客</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
-    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
-    <lastBuildDate>Mon, 21 Oct 2024 16:33:28 +0800</lastBuildDate>
-    <atom:link href="https://baoyuxiang.fun/tags/webgl/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in WebGL on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>522425561@qq.com (鲍宇翔)</managingEditor>
+    <webMaster>522425561@qq.com (鲍宇翔)</webMaster>
+    <copyright>© 2025 鲍宇翔</copyright>
+    <lastBuildDate>Mon, 21 Oct 2024 16:33:28 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/tags/webgl/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Three.js简介</title>
-      <link>https://baoyuxiang.fun/three-js%E7%AE%80%E4%BB%8B/</link>
-      <pubDate>Mon, 21 Oct 2024 16:33:28 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>https://baoyuxiang.fun/three-js%E7%AE%80%E4%BB%8B/</guid>
-      <description>&lt;h1 id=&#34;threejs-介绍&#34;&gt;Three.Js 介绍&lt;/h1&gt;&#xA;&lt;p&gt;Three.js 由 Ricardo Cabello 在 2010 四月于 GitHub 首次发布。&lt;/p&gt;&#xA;&lt;p&gt;Three.js 是一个跨浏览器的使用 JavaScript 函数库或 API 来在网页浏览器中创建和展示三维计算机图形的开源通用 3D 代码库。Three.js 使用 WebGL 渲染图形，也可通过插件使用 WebGPU（实验性）、SVG 和 CSS3D 渲染器。源代码托管在 GitHub。&lt;/p&gt;</description>
+      <link>https://baoyuxiang.fun/posts/three-js%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 21 Oct 2024 16:33:28 +0800</pubDate>
+      <author>522425561@qq.com (鲍宇翔)</author>
+      <guid>https://baoyuxiang.fun/posts/three-js%E7%AE%80%E4%BB%8B/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Three.Js 介绍 
+    &lt;div id=&#34;threejs-介绍&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#threejs-%e4%bb%8b%e7%bb%8d&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;Three.js 由 Ricardo Cabello 在 2010 四月于 GitHub 首次发布。&lt;/p&gt;
+&lt;p&gt;Three.js 是一个跨浏览器的使用 JavaScript 函数库或 API 来在网页浏览器中创建和展示三维计算机图形的开源通用 3D 代码库。Three.js 使用 WebGL 渲染图形，也可通过插件使用 WebGPU（实验性）、SVG 和 CSS3D 渲染器。源代码托管在 GitHub。&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>未来 on 鲍宇翔的博客</title>
+    <title>未来 on Blowfish</title>
     <link>https://baoyuxiang.fun/tags/%E6%9C%AA%E6%9D%A5/</link>
-    <description>Recent content in 未来 on 鲍宇翔的博客</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
-    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
-    <lastBuildDate>Thu, 15 May 2025 18:15:56 +0800</lastBuildDate>
-    <atom:link href="https://baoyuxiang.fun/tags/%E6%9C%AA%E6%9D%A5/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in 未来 on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>522425561@qq.com (鲍宇翔)</managingEditor>
+    <webMaster>522425561@qq.com (鲍宇翔)</webMaster>
+    <copyright>© 2025 鲍宇翔</copyright>
+    <lastBuildDate>Thu, 15 May 2025 18:15:56 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/tags/%E6%9C%AA%E6%9D%A5/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>快要结束的大三和本科生涯</title>
-      <link>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
-      <pubDate>Thu, 15 May 2025 18:15:56 +0800</pubDate><author>522425561@qq.com (Ethan Bao)</author>
-      <guid>https://baoyuxiang.fun/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
-      <description>&lt;h3 id=&#34;再见大三和上课的日子&#34;&gt;再见，大三和上课的日子！&lt;/h3&gt;&#xA;&lt;p&gt;是的，我的大三生活快结束了。&lt;/p&gt;&#xA;&lt;p&gt;本来以为大学四年是很长的一段时间，结果发现也不过如此，从 2022 年进入上海大学 SHU 修读计算机专业开始，转眼间已经接近三个年头了。回想起来这三年，似乎我学到了很多，成长了不少，又似乎抛弃了某些…&lt;/p&gt;</description>
+      <link>https://baoyuxiang.fun/posts/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</link>
+      <pubDate>Thu, 15 May 2025 18:15:56 +0800</pubDate>
+      <author>522425561@qq.com (鲍宇翔)</author>
+      <guid>https://baoyuxiang.fun/posts/%E5%BF%AB%E8%A6%81%E7%BB%93%E6%9D%9F%E7%9A%84%E5%A4%A7%E4%B8%89%E5%92%8C%E6%9C%AC%E7%A7%91%E7%94%9F%E6%B6%AF/</guid>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;再见，大三和上课的日子！ 
+    &lt;div id=&#34;再见大三和上课的日子&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%86%8d%e8%a7%81%e5%a4%a7%e4%b8%89%e5%92%8c%e4%b8%8a%e8%af%be%e7%9a%84%e6%97%a5%e5%ad%90&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;是的，我的大三生活快结束了。&lt;/p&gt;
+&lt;p&gt;本来以为大学四年是很长的一段时间，结果发现也不过如此，从 2022 年进入上海大学 SHU 修读计算机专业开始，转眼间已经接近三个年头了。回想起来这三年，似乎我学到了很多，成长了不少，又似乎抛弃了某些…&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;从大一刚入学时候的迷茫，新鲜感，到大二逐渐熟悉校园生活，大三彻底明白了学校的各种制度和逻辑，仿佛大学对我来说只是相对于高中的一个&lt;strong&gt;不同环境而已&lt;/strong&gt;。但是，真的是这样吗？&lt;/p&gt;
+&lt;p&gt;2022.7，因为 COVID-19，我的高中有一大半的日子都在封锁、口罩中度过。高考结束的那天，似乎一切都到了一个&lt;code&gt;终点&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;2022.9，搬着行李，从金山到宝山，我选了离家更远的这所 211。刚入学的时候面对什么都很兴奋，但回想起来那个时候我真是一个大 i 人。不过，我很开心自己能够在大一选择了很多社团，还加入了学院的信息部，认识了一堆有趣的朋友。&lt;/p&gt;
+&lt;p&gt;我觉得大一的日子，是甜蜜的，有很多回忆值得珍藏，很多不舍，但对于&lt;strong&gt;CS&lt;/strong&gt;的求学之路，大一基本上就是一个&lt;strong&gt;坑&lt;/strong&gt;，让我错失了一年多的学习时间。其实这并不完全怪我，&lt;em&gt;象牙塔里的人怎么能够了解外面的世界&lt;/em&gt;。大一的时候我只知道要好好准备期末考试，而其他时间玩就行了。&lt;em&gt;高级语言程序设计&lt;/em&gt;我也有好好在学，可却落得了一个不理想的成绩。我觉得计算机不是我该学的学科，逐渐开始摆烂，对 CS 丧失了兴趣。&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>
