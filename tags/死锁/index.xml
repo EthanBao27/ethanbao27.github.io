@@ -6,16 +6,16 @@
     <description>Recent content in 死锁 on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <managingEditor>522425561@qq.com (鲍宇翔)</managingEditor>
-    <webMaster>522425561@qq.com (鲍宇翔)</webMaster>
-    <copyright>© 2025 鲍宇翔</copyright>
+    <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
+    <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
+    <copyright>@沪ICP备2025116601号-1</copyright>
     <lastBuildDate>Sat, 26 Oct 2024 13:43:00 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/tags/%E6%AD%BB%E9%94%81/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OS：处理机调度与死锁🔒</title>
       <link>https://baoyuxiang.fun/posts/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/</link>
       <pubDate>Sat, 26 Oct 2024 13:43:00 +0800</pubDate>
-      <author>522425561@qq.com (鲍宇翔)</author>
+      <author>522425561@qq.com (Ethan Bao)</author>
       <guid>https://baoyuxiang.fun/posts/chapter-3-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;处理机调度与死锁 🔒 
     &lt;div id=&#34;处理机调度与死锁-&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
