@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>鲍宇翔的博客 on Blowfish</title>
+    <title>鲍宇翔的博客 on YuXiang Bao</title>
     <link>https://baoyuxiang.fun/</link>
-    <description>Recent content in 鲍宇翔的博客 on Blowfish</description>
+    <description>Recent content in 鲍宇翔的博客 on YuXiang Bao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
     <webMaster>522425561@qq.com (Ethan Bao)</webMaster>
     <copyright>@沪ICP备2025116601号-1</copyright>
-    <lastBuildDate>Thu, 03 Jul 2025 22:53:00 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jul 2025 22:55:35 +0800</lastBuildDate><atom:link href="https://baoyuxiang.fun/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Git基本</title>
+      <link>https://baoyuxiang.fun/posts/git%E5%9F%BA%E6%9C%AC/</link>
+      <pubDate>Wed, 23 Jul 2025 22:55:35 +0800</pubDate>
+      <author>522425561@qq.com (Ethan Bao)</author>
+      <guid>https://baoyuxiang.fun/posts/git%E5%9F%BA%E6%9C%AC/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Git
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 496 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+ 是什么?&lt;/em&gt;&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://baoyuxiang.fun/posts/git%E5%9F%BA%E6%9C%AC/feature.jpg" />
+    </item>
     
     <item>
       <title>最近实习的一些心得</title>
@@ -20,22 +37,9 @@
       <description>&lt;blockquote&gt;
 &lt;p&gt;说来也怪，为什么突然想写博客了呢。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;一是可能确实距离上次写博客有一个多月的时间了，二是在学校没有课后，我真的在思考自己的人生和未来，也觉得自己学到了一些。
-确实，5月-6月我花了差不多大半个月的时间投递简历，面试，最后一家od供应链公司给出了oc。问清了是Java开发，符合我的预期，mentor性格挺好的，也乐于带教，于是我就去了。
-landing前一周，&lt;strong&gt;并没有很多coding&lt;/strong&gt;的任务，大多数是在一个java项目里用spring configuration的一些注解读取配置类，然后在yaml文件里配置一些公司数据，就能自动取数，生成excel文件了，最后还要根据接口文档校对文件的表列名，没怎么写代码，倒是学了一下基础的excel操作。&lt;/p&gt;
-&lt;p&gt;第二周逐渐开始熟悉公司业务，接了一个&lt;code&gt;数据同步平台&lt;/code&gt;的项目，这个项目业务开始比较复杂了，属于公司内部人事管理系统，需要比较熟练的&lt;strong&gt;java Web Http请求基础&lt;/strong&gt;，以及&lt;strong&gt;序列化、反序列化&lt;/strong&gt;的能力，用到jackson包，并且要&lt;strong&gt;熟悉springboot一些常用注解&lt;/strong&gt;，和&lt;strong&gt;jpa&lt;/strong&gt;等数据库访问的操作，需要比较好的面向对象封装能力。这三天还是比较锻炼我的，一个是锻炼阅读代码的能力，还有一个是自己的抗压能力，每天工作8小时几乎一直在看代码，从一点也不会的小白，一直问mentor问题，不断的NullPointerException，到自己逐渐学会熟练debugger，学会封装方法和类，异常处理，日志处理的能力，coding能力所及绝对是有比较大的提升的。&lt;/p&gt;
-
-&lt;h4 class=&#34;relative group&#34;&gt;聊聊生活方面 
-    &lt;div id=&#34;聊聊生活方面&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%81%8a%e8%81%8a%e7%94%9f%e6%b4%bb%e6%96%b9%e9%9d%a2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h4&gt;
-&lt;p&gt;公司的通勤稍微有点&lt;strong&gt;耗时&lt;/strong&gt;，现在基本每天都要7点15分起床，8点半前到公司，下午5点半下班，有时候会加班10-20分钟，但是mentor是不会催促我的，之前都是我自己心里觉得有活没干完不好意思走，所以自己加了会班，总体上，公司有比较严格的&lt;strong&gt;上班打卡&lt;/strong&gt;制度和&lt;strong&gt;着装要求&lt;/strong&gt;制度，以及直属领导脾气有点暴躁之外，其他地方还算好。环境处于市中心，整洁比较高档，楼下是商业街区，想要吃饭比较方便。&lt;/p&gt;
-&lt;p&gt;我最近的感受是，自己每天都睡的很晚，最近有些焦虑，一是因为未来大四&lt;u&gt;申请香港学校硕士&lt;/u&gt;的问题，我并不能保证自己一定能申请的上，且对于职业规划，我也不是百分百确定以后要当程序员，因为我在上海，本地公务员无论从薪资待遇还是压力上，都基本上优秀于私企员工。父母极力推崇公务员，所以我在考虑要不要将其作为未来规划准备。&lt;/p&gt;
-&lt;p&gt;希望未来一个月，我能更好处理睡眠、学业、事业、生活等问题，尽量保证健康的同时，继续提升coding能力，准备开始刷算法题，积极逛一下开源论坛，争取能有contribution。&lt;/p&gt;</description>
+确实，5 月-6 月我花了差不多大半个月的时间投递简历，面试，最后一家 od 供应链公司给出了 oc。问清了是 Java 开发，符合我的预期，mentor 性格挺好的，也乐于带教，于是我就去了。
+landing 前一周，&lt;strong&gt;并没有很多 coding&lt;/strong&gt;的任务，大多数是在一个 java 项目里用 spring configuration 的一些注解读取配置类，然后在 yaml 文件里配置一些公司数据，就能自动取数，生成 excel 文件了，最后还要根据接口文档校对文件的表列名，没怎么写代码，倒是学了一下基础的 excel 操作。&lt;/p&gt;
+&lt;p&gt;第二周逐渐开始熟悉公司业务，接了一个&lt;code&gt;数据同步平台&lt;/code&gt;的项目，这个项目业务开始比较复杂了，属于公司内部人事管理系统，需要比较熟练的&lt;strong&gt;java Web Http 请求基础&lt;/strong&gt;，以及&lt;strong&gt;序列化、反序列化&lt;/strong&gt;的能力，用到 jackson 包，并且要&lt;strong&gt;熟悉 springboot 一些常用注解&lt;/strong&gt;，和&lt;strong&gt;jpa&lt;/strong&gt;等数据库访问的操作，需要比较好的面向对象封装能力。这三天还是比较锻炼我的，一个是锻炼阅读代码的能力，还有一个是自己的抗压能力，每天工作 8 小时几乎一直在看代码，从一点也不会的小白，一直问 mentor 问题，不断的 NullPointerException，到自己逐渐学会熟练 debugger，学会封装方法和类，异常处理，日志处理的能力，coding 能力所及绝对是有比较大的提升的。&lt;/p&gt;</description>
       
     </item>
     
@@ -652,7 +656,7 @@ landing前一周，&lt;strong&gt;并没有很多coding&lt;/strong&gt;的任务�
     </item>
     
     <item>
-      <title></title>
+      <title>关于我</title>
       <link>https://baoyuxiang.fun/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>522425561@qq.com (Ethan Bao)</author>
@@ -668,20 +672,46 @@ landing前一周，&lt;strong&gt;并没有很多coding&lt;/strong&gt;的任务�
 &lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;bg&lt;/code&gt;: &lt;em&gt;鲍宇翔&lt;/em&gt;，&lt;em&gt;上海大学(SHU)，2022 级本科生，计算机科学与技术专业。&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;喜欢 JOJO，故送上一句名言：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;我追求的并不是一个「结果」，一旦只追求「结果」，人就容易想方设法抄近路，在抄近路的过程中，人又容易迷失真相，做事的干劲也会逐渐消磨殆尽&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;h3 class=&#34;relative group&#34;&gt;关于自我经历和感想 
-    &lt;div id=&#34;关于自我经历和感想&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e5%85%b3%e4%ba%8e%e8%87%aa%e6%88%91%e7%bb%8f%e5%8e%86%e5%92%8c%e6%84%9f%e6%83%b3&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h3&gt;
-&lt;p&gt;可以查看我博客下&lt;code&gt;自我&lt;/code&gt;分类下的文章。&lt;/p&gt;</description>
+
+  &lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://git.io/typing-svg&#34;
+    target=&#34;_blank&#34;
+  &gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;Typing SVG&#34; src=&#34;https://readme-typing-svg.herokuapp.com?font=Input&amp;#43;Mono&amp;amp;weight=750&amp;amp;pause=1000&amp;amp;color=8A95EDED&amp;amp;center=true&amp;amp;vCenter=true&amp;amp;random=true&amp;amp;width=435&amp;amp;lines=Hi&amp;#43;There!&amp;#43;I&amp;#43;am&amp;#43;Ethan&amp;#43;Bao;Let%27s&amp;#43;Enjoy&amp;#43;The&amp;#43;Process&amp;#43;Of&amp;#43;Coding!&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/EthanBao27&#34;
+    target=&#34;_blank&#34;
+  &gt;
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img class=&#34;my-0 rounded-md&#34; loading=&#34;lazy&#34; alt=&#34;Profile Views&#34; src=&#34;https://komarev.com/ghpvc/?username=EthanBao27&amp;amp;color=7CAEA3&amp;amp;style=for-the-badge&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXBkenJtZDBpb3E5NzFodDNoN2piMnBpdDRzcWdkeXk0cXFtaTBzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IOwzBZrp0VIpdXkYDc/giphy.gif&#34; width=&#34;260&#34; /&gt;
+&lt;/div&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;em&gt;&lt;h3&gt;About&lt;/h3&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You can call me &lt;em&gt;Ethan Bao&lt;/em&gt;&lt;/p&gt;</description>
       
     </item>
     

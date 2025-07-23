@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>实习 on Blowfish</title>
+    <title>实习 on YuXiang Bao</title>
     <link>https://baoyuxiang.fun/tags/%E5%AE%9E%E4%B9%A0/</link>
-    <description>Recent content in 实习 on Blowfish</description>
+    <description>Recent content in 实习 on YuXiang Bao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>522425561@qq.com (Ethan Bao)</managingEditor>
@@ -20,22 +20,9 @@
       <description>&lt;blockquote&gt;
 &lt;p&gt;说来也怪，为什么突然想写博客了呢。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;一是可能确实距离上次写博客有一个多月的时间了，二是在学校没有课后，我真的在思考自己的人生和未来，也觉得自己学到了一些。
-确实，5月-6月我花了差不多大半个月的时间投递简历，面试，最后一家od供应链公司给出了oc。问清了是Java开发，符合我的预期，mentor性格挺好的，也乐于带教，于是我就去了。
-landing前一周，&lt;strong&gt;并没有很多coding&lt;/strong&gt;的任务，大多数是在一个java项目里用spring configuration的一些注解读取配置类，然后在yaml文件里配置一些公司数据，就能自动取数，生成excel文件了，最后还要根据接口文档校对文件的表列名，没怎么写代码，倒是学了一下基础的excel操作。&lt;/p&gt;
-&lt;p&gt;第二周逐渐开始熟悉公司业务，接了一个&lt;code&gt;数据同步平台&lt;/code&gt;的项目，这个项目业务开始比较复杂了，属于公司内部人事管理系统，需要比较熟练的&lt;strong&gt;java Web Http请求基础&lt;/strong&gt;，以及&lt;strong&gt;序列化、反序列化&lt;/strong&gt;的能力，用到jackson包，并且要&lt;strong&gt;熟悉springboot一些常用注解&lt;/strong&gt;，和&lt;strong&gt;jpa&lt;/strong&gt;等数据库访问的操作，需要比较好的面向对象封装能力。这三天还是比较锻炼我的，一个是锻炼阅读代码的能力，还有一个是自己的抗压能力，每天工作8小时几乎一直在看代码，从一点也不会的小白，一直问mentor问题，不断的NullPointerException，到自己逐渐学会熟练debugger，学会封装方法和类，异常处理，日志处理的能力，coding能力所及绝对是有比较大的提升的。&lt;/p&gt;
-
-&lt;h4 class=&#34;relative group&#34;&gt;聊聊生活方面 
-    &lt;div id=&#34;聊聊生活方面&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#%e8%81%8a%e8%81%8a%e7%94%9f%e6%b4%bb%e6%96%b9%e9%9d%a2&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h4&gt;
-&lt;p&gt;公司的通勤稍微有点&lt;strong&gt;耗时&lt;/strong&gt;，现在基本每天都要7点15分起床，8点半前到公司，下午5点半下班，有时候会加班10-20分钟，但是mentor是不会催促我的，之前都是我自己心里觉得有活没干完不好意思走，所以自己加了会班，总体上，公司有比较严格的&lt;strong&gt;上班打卡&lt;/strong&gt;制度和&lt;strong&gt;着装要求&lt;/strong&gt;制度，以及直属领导脾气有点暴躁之外，其他地方还算好。环境处于市中心，整洁比较高档，楼下是商业街区，想要吃饭比较方便。&lt;/p&gt;
-&lt;p&gt;我最近的感受是，自己每天都睡的很晚，最近有些焦虑，一是因为未来大四&lt;u&gt;申请香港学校硕士&lt;/u&gt;的问题，我并不能保证自己一定能申请的上，且对于职业规划，我也不是百分百确定以后要当程序员，因为我在上海，本地公务员无论从薪资待遇还是压力上，都基本上优秀于私企员工。父母极力推崇公务员，所以我在考虑要不要将其作为未来规划准备。&lt;/p&gt;
-&lt;p&gt;希望未来一个月，我能更好处理睡眠、学业、事业、生活等问题，尽量保证健康的同时，继续提升coding能力，准备开始刷算法题，积极逛一下开源论坛，争取能有contribution。&lt;/p&gt;</description>
+确实，5 月-6 月我花了差不多大半个月的时间投递简历，面试，最后一家 od 供应链公司给出了 oc。问清了是 Java 开发，符合我的预期，mentor 性格挺好的，也乐于带教，于是我就去了。
+landing 前一周，&lt;strong&gt;并没有很多 coding&lt;/strong&gt;的任务，大多数是在一个 java 项目里用 spring configuration 的一些注解读取配置类，然后在 yaml 文件里配置一些公司数据，就能自动取数，生成 excel 文件了，最后还要根据接口文档校对文件的表列名，没怎么写代码，倒是学了一下基础的 excel 操作。&lt;/p&gt;
+&lt;p&gt;第二周逐渐开始熟悉公司业务，接了一个&lt;code&gt;数据同步平台&lt;/code&gt;的项目，这个项目业务开始比较复杂了，属于公司内部人事管理系统，需要比较熟练的&lt;strong&gt;java Web Http 请求基础&lt;/strong&gt;，以及&lt;strong&gt;序列化、反序列化&lt;/strong&gt;的能力，用到 jackson 包，并且要&lt;strong&gt;熟悉 springboot 一些常用注解&lt;/strong&gt;，和&lt;strong&gt;jpa&lt;/strong&gt;等数据库访问的操作，需要比较好的面向对象封装能力。这三天还是比较锻炼我的，一个是锻炼阅读代码的能力，还有一个是自己的抗压能力，每天工作 8 小时几乎一直在看代码，从一点也不会的小白，一直问 mentor 问题，不断的 NullPointerException，到自己逐渐学会熟练 debugger，学会封装方法和类，异常处理，日志处理的能力，coding 能力所及绝对是有比较大的提升的。&lt;/p&gt;</description>
       
     </item>
     
